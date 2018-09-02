@@ -98,7 +98,7 @@ var TicketsIndex = function (_Component) {
           fileName: _jsxFileName,
           lineNumber: 14
         }
-      }, 'Fuck You Nigga'));
+      }, 'MAIN PAGE'));
     }
   }]);
 
