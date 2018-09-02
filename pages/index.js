@@ -11,7 +11,7 @@ class TicketsIndex extends Component {
   render() {
     return (
       <div>
-        <h1>Fuck You Nigga</h1>
+        <h1>MAIN PAGE</h1>
       </div>
     )
   }

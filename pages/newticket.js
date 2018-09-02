@@ -1,5 +1,5 @@
 import React from 'react'
 
 export default () => {
-  return <h1>This is the new ticket page nigga</h1>
+  return <h1>NewTicket Page</h1>
 }
