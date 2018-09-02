@@ -39,5 +39,6 @@ contract Tickets {
         require(msg.value == ticketPrice);
         buyer.push(msg.sender);
         manager.transfer(this.balance);
+        selfdestruct(manager);
     }
 }
