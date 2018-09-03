@@ -3,8 +3,8 @@ pragma solidity ^0.4.17;
 contract TicketsFactory {
     address[] public deployedTickets;
 
-    function createTicket(uint price, string name, string startTime, string venue, string city) public {
-        address newTickets = new Tickets(price, name, startTime, venue, city, msg.sender);
+    function createTicket(uint price, string info) public {
+        address newTickets = new Tickets(price, info, msg.sender);
         deployedTickets.push(newTickets);
     }
 
@@ -16,28 +16,16 @@ contract TicketsFactory {
 contract Tickets {
     address public manager;
     uint public ticketPrice;
-    struct TicketInfo {
-        string concertName;
-        string concertStartTime;
-        string concertVenue;
-        string concertCity;
-    }
-    address[] buyer;
+    string public concertInfo;
 
-    function Tickets(uint price, string name, string startTime, string venue, string city, address creator) public payable {
+    function Tickets(uint price, string info, address creator) public payable {
         manager = creator;
-        TicketInfo memory newTicketInfo = TicketInfo({
-            concertName: name,
-            concertStartTime: startTime,
-            concertVenue: venue,
-            concertCity: city
-        });
+        concertInfo = info;
         ticketPrice = price;
     }
 
     function buyTicket() public payable {
         require(msg.value == ticketPrice);
-        buyer.push(msg.sender);
         manager.transfer(this.balance);
         selfdestruct(manager);
     }
