@@ -191,7 +191,7 @@ var SingleTicket = function (_Component) {
     _this.state = {
       concert: [],
       price: '',
-      loading: true,
+      loading: false,
       error: '',
       deleted: false
     };
