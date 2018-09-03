@@ -40,6 +40,10 @@ var _ticket = require('../Ethereum/ticket');
 
 var _ticket2 = _interopRequireDefault(_ticket);
 
+var _web = require('../Ethereum/web3');
+
+var _web2 = _interopRequireDefault(_web);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _jsxFileName = '/Users/Marko/Documents/FullStack-Junior/ticketSellingDApp/Components/SingleTicket.js';
@@ -55,8 +59,13 @@ var SingleTicket = function (_Component) {
 
     _this.state = {
       concert: [],
-      price: ''
+      price: '',
+      loading: false,
+      error: '',
+      deleted: false
     };
+    _this.loadInfo = _this.loadInfo.bind(_this);
+    _this.buyTicket = _this.buyTicket.bind(_this);
     return _this;
   }
 
@@ -69,27 +78,37 @@ var SingleTicket = function (_Component) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
+                _context.prev = 0;
                 ticket = (0, _ticket2.default)(this.props.address);
-                _context.next = 3;
+                _context.next = 4;
                 return ticket.methods.concertInfo().call();
 
-              case 3:
+              case 4:
                 ticketInfo = _context.sent;
                 info = ticketInfo.split('/');
-                _context.next = 7;
+                _context.next = 8;
                 return ticket.methods.ticketPrice().call();
 
-              case 7:
+              case 8:
                 ticketPrice = _context.sent;
 
                 this.loadInfo(info, ticketPrice);
+                _context.next = 16;
+                break;
 
-              case 9:
+              case 12:
+                _context.prev = 12;
+                _context.t0 = _context['catch'](0);
+
+                console.log(_context.t0);
+                this.setState({ deleted: true });
+
+              case 16:
               case 'end':
                 return _context.stop();
             }
           }
-        }, _callee, this);
+        }, _callee, this, [[0, 12]]);
       }));
 
       function componentDidMount() {
@@ -106,60 +125,129 @@ var SingleTicket = function (_Component) {
     }
   }, {
     key: 'buyTicket',
-    value: function buyTicket() {
-      console.log('hi');
-    }
+    value: function () {
+      var _ref2 = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee2(evt) {
+        var ticket, accounts;
+        return _regenerator2.default.wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                evt.preventDefault();
+                ticket = (0, _ticket2.default)(this.props.address);
+
+                this.setState({ loading: true });
+
+                _context2.prev = 3;
+                _context2.next = 6;
+                return _web2.default.eth.getAccounts();
+
+              case 6:
+                accounts = _context2.sent;
+                _context2.next = 9;
+                return ticket.methods.buyTicket().send({
+                  from: accounts[0],
+                  value: this.state.price
+                });
+
+              case 9:
+                _context2.next = 14;
+                break;
+
+              case 11:
+                _context2.prev = 11;
+                _context2.t0 = _context2['catch'](3);
+
+                this.setState({ error: _context2.t0.message });
+
+              case 14:
+
+                this.setState({ loading: false });
+
+              case 15:
+              case 'end':
+                return _context2.stop();
+            }
+          }
+        }, _callee2, this, [[3, 11]]);
+      }));
+
+      function buyTicket(_x) {
+        return _ref2.apply(this, arguments);
+      }
+
+      return buyTicket;
+    }()
   }, {
     key: 'render',
     value: function render() {
 
-      return _react2.default.createElement('div', {
+      return this.state.deleted ? null : _react2.default.createElement('div', {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 61
         }
       }, _react2.default.createElement('div', { className: 'ticket', __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 62
         }
       }, _react2.default.createElement('div', { className: 'ticketHeader', __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 63
         }
       }, _react2.default.createElement('h1', {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 64
         }
       }, this.state.concert[0]), _react2.default.createElement('h2', {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 65
         }
-      }, this.state.price, ' wei')), _react2.default.createElement('div', { className: 'ticketmeta', __source: {
+      }, this.state.price + ' wei')), _react2.default.createElement('div', { className: 'ticketmeta', __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 67
         }
       }, _react2.default.createElement('h4', {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 68
         }
-      }, 'Starts at ', this.state.concert[1]), _react2.default.createElement('h5', {
+      }, 'Starts at ' + this.state.concert[1]), _react2.default.createElement('h5', {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 69
         }
-      }, this.state.concert[2], ' in ', this.state.concert[3])), _react2.default.createElement('div', {
+      }, this.state.concert[2] + ' in ', this.state.concert[3])), _react2.default.createElement('div', {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 71
         }
       }, _react2.default.createElement('button', { type: 'submit', onClick: this.buyTicket, __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 72
         }
-      }, 'Buy'))));
+      }, 'Buy')), !this.state.loading ? null : _react2.default.createElement('div', {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 77
+        }
+      }, _react2.default.createElement('h4', {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 78
+        }
+      }, 'This takes 15-30 Seonds, please wait!')), this.state.error === '' ? null : _react2.default.createElement('div', {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 84
+        }
+      }, _react2.default.createElement('h4', {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 85
+        }
+      }, 'Error! ', this.state.error))));
     }
   }]);
 
@@ -167,4 +255,4 @@ var SingleTicket = function (_Component) {
 }(_react.Component);
 
 exports.default = SingleTicket;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkNvbXBvbmVudHMvU2luZ2xlVGlja2V0LmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50IiwiVGlja2V0cyIsIlNpbmdsZVRpY2tldCIsInByb3BzIiwic3RhdGUiLCJjb25jZXJ0IiwicHJpY2UiLCJ0aWNrZXQiLCJhZGRyZXNzIiwibWV0aG9kcyIsImNvbmNlcnRJbmZvIiwiY2FsbCIsInRpY2tldEluZm8iLCJpbmZvIiwic3BsaXQiLCJ0aWNrZXRQcmljZSIsImxvYWRJbmZvIiwic2V0U3RhdGUiLCJjb25zb2xlIiwibG9nIiwiYnV5VGlja2V0Il0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsQUFBTyxBQUFROzs7O0FBQ2YsQUFBTyxBQUFhOzs7Ozs7Ozs7SSxBQUdkO3dDQUVKOzt3QkFBQSxBQUFZLE9BQU87d0NBQUE7O2tKQUFBLEFBQ1gsQUFDTjs7VUFBQSxBQUFLO2VBQVEsQUFDRixBQUNUO2FBSmUsQUFFakIsQUFBYSxBQUVKO0FBRkksQUFDWDtXQUdIOzs7Ozs7Ozs7OzttQkFHTztBLHlCQUFTLHNCQUFRLEtBQUEsQUFBSyxNLEFBQWIsQUFBbUI7O3VCQUNULE9BQUEsQUFBTyxRQUFQLEFBQWUsY0FBZixBQUE2QixBOzttQkFBaEQ7QSxzQ0FDQTtBLHVCQUFPLFdBQUEsQUFBVyxNQUFNLEEsQUFBakI7O3VCQUNhLE9BQUEsQUFBTyxRQUFQLEFBQWUsYyxBQUFmLEFBQTZCOzttQkFBakQ7QSx1Q0FDTjs7cUJBQUEsQUFBSyxTQUFMLEFBQWMsTUFBZCxBQUFvQjs7Ozs7Ozs7Ozs7Ozs7Ozs7OzZCQUdiLEEsTSxBQUFNLE9BQU8sQUFDcEI7V0FBQSxBQUFLLFNBQVMsRUFBQyxTQUFmLEFBQWMsQUFBVSxBQUN4QjtXQUFBLEFBQUssU0FBUyxFQUFDLE9BQU8sS0FBdEIsQUFBYyxBQUFhLEFBQzVCOzs7O2dDQUVXLEFBQ1Y7Y0FBQSxBQUFRLElBQVIsQUFBWSxBQUNiOzs7OzZCQUVPLEFBRU47OzZCQUNFLGNBQUE7O29CQUFBO3NCQUFBLEFBQ0U7QUFERjtBQUFBLE9BQUEsa0JBQ0UsY0FBQSxTQUFLLFdBQUwsQUFBZTtvQkFBZjtzQkFBQSxBQUNFO0FBREY7eUJBQ0UsY0FBQSxTQUFLLFdBQUwsQUFBZTtvQkFBZjtzQkFBQSxBQUNFO0FBREY7eUJBQ0UsY0FBQTs7b0JBQUE7c0JBQUEsQUFBSztBQUFMO0FBQUEsY0FBSyxBQUFLLE1BQUwsQUFBVyxRQURsQixBQUNFLEFBQUssQUFBbUIsQUFDeEIscUJBQUEsY0FBQTs7b0JBQUE7c0JBQUEsQUFBSztBQUFMO0FBQUEsY0FBSyxBQUFLLE1BQVYsQUFBZ0IsT0FIcEIsQUFDRSxBQUVFLEFBRUYsMEJBQUEsY0FBQSxTQUFLLFdBQUwsQUFBZTtvQkFBZjtzQkFBQSxBQUNFO0FBREY7eUJBQ0UsY0FBQTs7b0JBQUE7c0JBQUE7QUFBQTtBQUFBLFNBQWUsbUJBQUEsQUFBSyxNQUFMLEFBQVcsUUFENUIsQUFDRSxBQUFlLEFBQW1CLEFBQ2xDLHFCQUFBLGNBQUE7O29CQUFBO3NCQUFBLEFBQUs7QUFBTDtBQUFBLGNBQUssQUFBSyxNQUFMLEFBQVcsUUFBaEIsQUFBSyxBQUFtQixJQUFRLGFBQUEsQUFBSyxNQUFMLEFBQVcsUUFQL0MsQUFLRSxBQUVFLEFBQWdDLEFBQW1CLEFBRXJELHNCQUFBLGNBQUE7O29CQUFBO3NCQUFBLEFBQ0U7QUFERjtBQUFBLHlCQUNFLGNBQUEsWUFBUSxNQUFSLEFBQWEsVUFBUyxTQUFTLEtBQS9CLEFBQW9DO29CQUFwQztzQkFBQTtBQUFBO1NBWlIsQUFDRSxBQUNFLEFBU0UsQUFDRSxBQU1UOzs7OztBQS9Dd0IsQSxBQWtEM0I7O2tCQUFBLEFBQWUiLCJmaWxlIjoiU2luZ2xlVGlja2V0LmpzIiwic291cmNlUm9vdCI6Ii9Vc2Vycy9NYXJrby9Eb2N1bWVudHMvRnVsbFN0YWNrLUp1bmlvci90aWNrZXRTZWxsaW5nREFwcCJ9
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkNvbXBvbmVudHMvU2luZ2xlVGlja2V0LmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50IiwiVGlja2V0cyIsIndlYjMiLCJTaW5nbGVUaWNrZXQiLCJwcm9wcyIsInN0YXRlIiwiY29uY2VydCIsInByaWNlIiwibG9hZGluZyIsImVycm9yIiwiZGVsZXRlZCIsImxvYWRJbmZvIiwiYmluZCIsImJ1eVRpY2tldCIsInRpY2tldCIsImFkZHJlc3MiLCJtZXRob2RzIiwiY29uY2VydEluZm8iLCJjYWxsIiwidGlja2V0SW5mbyIsImluZm8iLCJzcGxpdCIsInRpY2tldFByaWNlIiwiY29uc29sZSIsImxvZyIsInNldFN0YXRlIiwiZXZ0IiwicHJldmVudERlZmF1bHQiLCJldGgiLCJnZXRBY2NvdW50cyIsImFjY291bnRzIiwic2VuZCIsImZyb20iLCJ2YWx1ZSIsIm1lc3NhZ2UiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxBQUFPLEFBQVE7Ozs7QUFDZixBQUFPLEFBQWE7Ozs7QUFDcEIsQUFBTyxBQUFVOzs7Ozs7Ozs7SUFHWCxBO3dDQUVKOzt3QkFBQSxBQUFZLE9BQU87d0NBQUE7O2tKQUFBLEFBQ1gsQUFDTjs7VUFBQSxBQUFLO2VBQVEsQUFDRixBQUNUO2FBRlcsQUFFSixBQUNQO2VBSFcsQUFHRixBQUNUO2FBSlcsQUFJSixBQUNQO2VBTEYsQUFBYSxBQUtGLEFBRVg7QUFQYSxBQUNYO1VBTUYsQUFBSyxXQUFXLE1BQUEsQUFBSyxTQUFMLEFBQWMsS0FBOUIsQUFDQTtVQUFBLEFBQUssWUFBWSxNQUFBLEFBQUssVUFBTCxBQUFlLEtBVmYsQUFVakI7V0FDRDs7Ozs7Ozs7Ozs7O2dDQUlTO0EseUJBQVMsc0JBQVEsS0FBQSxBQUFLLE1BQWIsQSxBQUFtQjs7dUJBQ1QsT0FBQSxBQUFPLFFBQVAsQUFBZSxjQUFmLEEsQUFBNkI7O21CQUFoRDtBLHNDQUNBO0EsdUJBQU8sV0FBQSxBQUFXLE0s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

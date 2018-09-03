@@ -44,6 +44,10 @@ var _SingleTicket = require('../Components/SingleTicket');
 
 var _SingleTicket2 = _interopRequireDefault(_SingleTicket);
 
+var _Nav = require('../Components/Nav');
+
+var _Nav2 = _interopRequireDefault(_Nav);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _jsxFileName = '/Users/Marko/Documents/FullStack-Junior/ticketSellingDApp/pages/index.js?entry';
@@ -64,12 +68,17 @@ var TicketsIndex = function (_Component) {
       return _react2.default.createElement('div', {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 14
+          lineNumber: 15
         }
-      }, this.props.tickets.map(function (address) {
+      }, _react2.default.createElement(_Nav2.default, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 16
+        }
+      }), this.props.tickets.map(function (address) {
         return _react2.default.createElement(_SingleTicket2.default, { key: address, address: address, __source: {
             fileName: _jsxFileName,
-            lineNumber: 17
+            lineNumber: 19
           }
         });
       }));
@@ -110,4 +119,4 @@ var TicketsIndex = function (_Component) {
 }(_react.Component);
 
 exports.default = TicketsIndex;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50IiwiZmFjdG9yeSIsIlNpbmdsZVRpY2tldCIsIlRpY2tldHNJbmRleCIsInByb3BzIiwidGlja2V0cyIsIm1hcCIsImFkZHJlc3MiLCJtZXRob2RzIiwiZ2V0RGVwbG95ZWRUaWNrZXRzIiwiY2FsbCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLEFBQU8sQUFBUTs7OztBQUNmLEFBQU8sQUFBYTs7OztBQUNwQixBQUFPLEFBQWtCOzs7Ozs7Ozs7SSxBQUVuQjs7Ozs7Ozs7Ozs7NkJBT0ssQUFDUDs2QkFDRSxjQUFBOztvQkFBQTtzQkFBQSxBQUVJO0FBRko7QUFBQSxPQUFBLE9BRUksQUFBSyxNQUFMLEFBQVcsUUFBWCxBQUFtQixJQUFJLFVBQUEsQUFBQyxTQUFZLEFBQ2xDOytCQUFPLEFBQUMsd0NBQWEsS0FBZCxBQUFtQixTQUFTLFNBQTVCLEFBQXFDO3NCQUFyQzt3QkFBUCxBQUFPLEFBQ1I7QUFEUTtTQUFBO0FBSmYsQUFDRSxBQUVJLEFBTVA7Ozs7Ozs7Ozs7Ozt1QkFkdUIsa0JBQUEsQUFBUSxRQUFSLEFBQWdCLHFCQUFoQixBQUFxQyxBOzttQkFBckQ7QTtpREFDQyxFQUFDLFNBQUQsQTs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUpnQixBLEFBb0IzQjs7a0JBQUEsQUFBZSIsImZpbGUiOiJpbmRleC5qcz9lbnRyeSIsInNvdXJjZVJvb3QiOiIvVXNlcnMvTWFya28vRG9jdW1lbnRzL0Z1bGxTdGFjay1KdW5pb3IvdGlja2V0U2VsbGluZ0RBcHAifQ==
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50IiwiZmFjdG9yeSIsIlNpbmdsZVRpY2tldCIsIk5hdiIsIlRpY2tldHNJbmRleCIsInByb3BzIiwidGlja2V0cyIsIm1hcCIsImFkZHJlc3MiLCJtZXRob2RzIiwiZ2V0RGVwbG95ZWRUaWNrZXRzIiwiY2FsbCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLEFBQU8sQUFBUTs7OztBQUNmLEFBQU8sQUFBYTs7OztBQUNwQixBQUFPLEFBQWtCOzs7O0FBQ3pCLEFBQU8sQUFBUzs7Ozs7Ozs7O0lBRVYsQTs7Ozs7Ozs7Ozs7NkJBT0ssQUFDUDs2QkFDRSxjQUFBOztvQkFBQTtzQkFBQSxBQUNFO0FBREY7QUFBQSxPQUFBLGtCQUNFLEFBQUM7O29CQUFEO3NCQURGLEFBQ0UsQUFFRTtBQUZGO0FBQUEsZUFFRSxBQUFLLE1BQUwsQUFBVyxRQUFYLEFBQW1CLElBQUksVUFBQSxBQUFDLFNBQVksQUFDbEM7K0JBQU8sQUFBQyx3Q0FBYSxLQUFkLEFBQW1CLFNBQVMsU0FBNUIsQUFBcUM7c0JBQXJDO3dCQUFQLEFBQU8sQUFDUjtBQURRO1NBQUE7QUFMZixBQUNFLEFBR0ksQUFNUDs7Ozs7Ozs7Ozs7O3VCQWZ1QixrQkFBQSxBQUFRLFFBQVIsQUFBZ0IscUJBQWhCLEFBQXFDLEE7O21CQUFyRDtBO2lEQUNDLEVBQUMsU0FBRCxBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBSmdCLEEsQUFxQjNCOztrQkFBQSxBQUFlIiwiZmlsZSI6ImluZGV4LmpzP2VudHJ5Iiwic291cmNlUm9vdCI6Ii9Vc2Vycy9NYXJrby9Eb2N1bWVudHMvRnVsbFN0YWNrLUp1bmlvci90aWNrZXRTZWxsaW5nREFwcCJ9
