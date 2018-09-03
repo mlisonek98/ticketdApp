@@ -84,7 +84,7 @@ class NewTicket extends Component {
         {
           !this.state.loading ? null :
           (
-            <div>
+            <div className="loading">
               This Will Take 15-30 Seconds Be Patient!
             </div>
           )
@@ -92,7 +92,7 @@ class NewTicket extends Component {
         {
           this.state.error === '' ? null :
           (
-            <div>
+            <div className="error">
               <h2>Error! {this.state.error}</h2>
             </div>
           )
