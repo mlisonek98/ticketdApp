@@ -1,17 +1,22 @@
 import React, {Component} from 'react'
 import factory from '../Ethereum/factory'
+import SingleTicket from '../Components/SingleTicket'
 
 class TicketsIndex extends Component {
 
-  async componentDidMount() {
+  static async getInitialProps() {
     const tickets = await factory.methods.getDeployedTickets().call()
-    console.log(tickets)
+    return {tickets}
   }
 
   render() {
     return (
       <div>
-        <h1>MAIN PAGE</h1>
+        {
+          this.props.tickets.map((address) => {
+            return <SingleTicket key={address} address={address} />
+          })
+        }
       </div>
     )
   }

@@ -4,7 +4,7 @@ import TicketsFactory from './build/TicketsFactory.json'
 //get instance of our deployed factory contract
 const instance = new web3.eth.Contract(
   JSON.parse(TicketsFactory.interface),
-  '0x1c81faa36Ce86ADf5174E14840183600778269FC'
+  '0x8d32641521179A30608C78AA9bdf0720903925A3'
 )
 
 export default instance

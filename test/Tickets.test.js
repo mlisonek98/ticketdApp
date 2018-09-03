@@ -16,7 +16,7 @@ beforeEach(async () => {
 
   factory = await new web3.eth.Contract(JSON.parse(compiledFactory.interface)).deploy({data: compiledFactory.bytecode}).send({from: accounts[0], gas: '1000000'})
 
-  await factory.methods.createTicket('100', 'Kanye West', '9:00 P.M.', 'Barclays Center', 'Brooklyn').send({
+  await factory.methods.createTicket('100', 'Kanye West 9:00 P.M. Barclays Center Brooklyn').send({
     from: accounts[0],
     gas: '1000000'
   })

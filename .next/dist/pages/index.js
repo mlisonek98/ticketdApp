@@ -40,6 +40,10 @@ var _factory = require('../Ethereum/factory');
 
 var _factory2 = _interopRequireDefault(_factory);
 
+var _SingleTicket = require('../Components/SingleTicket');
+
+var _SingleTicket2 = _interopRequireDefault(_SingleTicket);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _jsxFileName = '/Users/Marko/Documents/FullStack-Junior/ticketSellingDApp/pages/index.js?entry';
@@ -55,7 +59,23 @@ var TicketsIndex = function (_Component) {
   }
 
   (0, _createClass3.default)(TicketsIndex, [{
-    key: 'componentDidMount',
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement('div', {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 14
+        }
+      }, this.props.tickets.map(function (address) {
+        return _react2.default.createElement(_SingleTicket2.default, { key: address, address: address, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 17
+          }
+        });
+      }));
+    }
+  }], [{
+    key: 'getInitialProps',
     value: function () {
       var _ref = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee() {
         var tickets;
@@ -68,8 +88,7 @@ var TicketsIndex = function (_Component) {
 
               case 2:
                 tickets = _context.sent;
-
-                console.log(tickets);
+                return _context.abrupt('return', { tickets: tickets });
 
               case 4:
               case 'end':
@@ -79,31 +98,16 @@ var TicketsIndex = function (_Component) {
         }, _callee, this);
       }));
 
-      function componentDidMount() {
+      function getInitialProps() {
         return _ref.apply(this, arguments);
       }
 
-      return componentDidMount;
+      return getInitialProps;
     }()
-  }, {
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement('div', {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 13
-        }
-      }, _react2.default.createElement('h1', {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 14
-        }
-      }, 'MAIN PAGE'));
-    }
   }]);
 
   return TicketsIndex;
 }(_react.Component);
 
 exports.default = TicketsIndex;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50IiwiZmFjdG9yeSIsIlRpY2tldHNJbmRleCIsIm1ldGhvZHMiLCJnZXREZXBsb3llZFRpY2tldHMiLCJjYWxsIiwidGlja2V0cyIsImNvbnNvbGUiLCJsb2ciXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxBQUFPLEFBQVE7Ozs7QUFDZixBQUFPLEFBQWE7Ozs7Ozs7OztJQUVkLEE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7dUJBR29CLGtCQUFBLEFBQVEsUUFBUixBQUFnQixxQkFBaEIsQSxBQUFxQzs7bUJBQXJEO0EsbUNBQ047O3dCQUFBLEFBQVEsSUFBUixBQUFZOzs7Ozs7Ozs7Ozs7Ozs7Ozs7NkJBR0wsQUFDUDs2QkFDRSxjQUFBOztvQkFBQTtzQkFBQSxBQUNFO0FBREY7QUFBQSxPQUFBLGtCQUNFLGNBQUE7O29CQUFBO3NCQUFBO0FBQUE7QUFBQSxTQUZKLEFBQ0UsQUFDRSxBQUdMOzs7OztBQWJ3QixBLEFBZ0IzQjs7a0JBQUEsQUFBZSIsImZpbGUiOiJpbmRleC5qcz9lbnRyeSIsInNvdXJjZVJvb3QiOiIvVXNlcnMvTWFya28vRG9jdW1lbnRzL0Z1bGxTdGFjay1KdW5pb3IvdGlja2V0U2VsbGluZ0RBcHAifQ==
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50IiwiZmFjdG9yeSIsIlNpbmdsZVRpY2tldCIsIlRpY2tldHNJbmRleCIsInByb3BzIiwidGlja2V0cyIsIm1hcCIsImFkZHJlc3MiLCJtZXRob2RzIiwiZ2V0RGVwbG95ZWRUaWNrZXRzIiwiY2FsbCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLEFBQU8sQUFBUTs7OztBQUNmLEFBQU8sQUFBYTs7OztBQUNwQixBQUFPLEFBQWtCOzs7Ozs7Ozs7SSxBQUVuQjs7Ozs7Ozs7Ozs7NkJBT0ssQUFDUDs2QkFDRSxjQUFBOztvQkFBQTtzQkFBQSxBQUVJO0FBRko7QUFBQSxPQUFBLE9BRUksQUFBSyxNQUFMLEFBQVcsUUFBWCxBQUFtQixJQUFJLFVBQUEsQUFBQyxTQUFZLEFBQ2xDOytCQUFPLEFBQUMsd0NBQWEsS0FBZCxBQUFtQixTQUFTLFNBQTVCLEFBQXFDO3NCQUFyQzt3QkFBUCxBQUFPLEFBQ1I7QUFEUTtTQUFBO0FBSmYsQUFDRSxBQUVJLEFBTVA7Ozs7Ozs7Ozs7Ozt1QkFkdUIsa0JBQUEsQUFBUSxRQUFSLEFBQWdCLHFCQUFoQixBQUFxQyxBOzttQkFBckQ7QTtpREFDQyxFQUFDLFNBQUQsQTs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUpnQixBLEFBb0IzQjs7a0JBQUEsQUFBZSIsImZpbGUiOiJpbmRleC5qcz9lbnRyeSIsInNvdXJjZVJvb3QiOiIvVXNlcnMvTWFya28vRG9jdW1lbnRzL0Z1bGxTdGFjay1KdW5pb3IvdGlja2V0U2VsbGluZ0RBcHAifQ==
