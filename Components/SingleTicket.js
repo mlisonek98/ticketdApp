@@ -69,19 +69,19 @@ class SingleTicket extends Component {
             <h5>{this.state.concert[2] + ' in '}{this.state.concert[3]}</h5>
           </div>
           <div>
-            <button type="submit" onClick={this.buyTicket}>Buy</button>
+            <button className="ticketButton" type="submit" onClick={this.buyTicket}>Buy</button>
           </div>
           {
             !this.state.loading ? null :
             (
-              <div>
+              <div className="loading">
                 <h4>This takes 15-30 Seonds, please wait!</h4>
               </div>
             )
           }
           {
             this.state.error === '' ? null :
-            <div>
+            <div className="error">
               <h4>Error! {this.state.error}</h4>
             </div>
           }
