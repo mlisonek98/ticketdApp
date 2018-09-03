@@ -1,5 +1,5 @@
 const routes = require('next-routes')();
 
-routes.add('/tickets/new', '/campaigns/new')
+routes.add('/new', '/new')
 
 module.exports = routes;
