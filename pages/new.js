@@ -2,7 +2,8 @@ import React, {Component} from 'react'
 import factory from '../Ethereum/factory'
 import web3 from '../Ethereum/web3'
 import {Router} from '../routes'
-
+import BackNav from '../Components/BackNav'
+import '../static/style.css'
 
 class NewTicket extends Component {
 
@@ -42,41 +43,44 @@ class NewTicket extends Component {
 
     return (
       <div>
-        <div>
-          <h1>Enter Ticket Information Below</h1>
+        <BackNav/>
+        <div className="outerForm">
+          <div>
+            <h2>Enter Ticket Information Below</h2>
+          </div>
+          <form className="form" id="newTicketForm" onSubmit={this.sellTicket}>
+            <div>
+              <label>Name of Performer</label>
+              <input name="name" type="text" required placeholder="Name"/>
+            </div>
+            <div>
+              <select name="startTime" label="Start Time">
+              {
+                this.state.time.map((time) => {
+                  return (
+                    <option key={time}>{time}</option>
+                  )
+                })
+              }
+              </select>
+            </div>
+            <div>
+              <label>Venue Name</label>
+              <input name="venue" type="text" required placeholder="venue" />
+            </div>
+            <div>
+              <label>Venue City</label>
+              <input name="city" type="text" required placeholder="city"/>
+            </div>
+            <div>
+              <label>Price</label>
+              <input name="price" type="text" required placeholder="00000000"/>
+            </div>
+            <div>
+              <button type="submit">Create</button>
+            </div>
+          </form>
         </div>
-        <form onSubmit={this.sellTicket}>
-          <div>
-            <label>Name of Performer</label>
-            <input name="name" type="text" required placeholder="Name"/>
-          </div>
-          <div>
-            <select name="startTime" label="Start Time">
-            {
-              this.state.time.map((time) => {
-                return (
-                  <option key={time}>{time}</option>
-                )
-              })
-            }
-            </select>
-          </div>
-          <div>
-            <label>Venue Name</label>
-            <input name="venue" type="text" required placeholder="venue" />
-          </div>
-          <div>
-            <label>Venue City</label>
-            <input name="city" type="text" required placeholder="city"/>
-          </div>
-          <div>
-            <label>Price</label>
-            <input name="price" type="text" required placeholder="00000000"/>
-          </div>
-          <div>
-            <button type="submit">Create</button>
-          </div>
-        </form>
         {
           !this.state.loading ? null :
           (
@@ -93,6 +97,7 @@ class NewTicket extends Component {
             </div>
           )
         }
+
       </div>
     )
   }

@@ -3,19 +3,19 @@ import {Link} from '../routes'
 import '../static/style.css'
 
 
-class Nav extends Component {
+class BackNav extends Component {
 
   render () {
 
     return (
       <div className="nav">
         <h1 className="header">TicketChain</h1>
-        <Link route="/new">
-          <button className="button">Sell Ticket</button>
+        <Link route="/">
+          <button className="button">Home</button>
         </Link>
       </div>
     )
   }
 }
 
-export default Nav
+export default BackNav

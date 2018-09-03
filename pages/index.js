@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import factory from '../Ethereum/factory'
 import SingleTicket from '../Components/SingleTicket'
 import Nav from '../Components/Nav'
+import '../static/style.css'
 
 class TicketsIndex extends Component {
 
@@ -12,13 +13,15 @@ class TicketsIndex extends Component {
 
   render() {
     return (
-      <div>
+      <div id="app">
         <Nav />
-        {
-          this.props.tickets.map((address) => {
-            return <SingleTicket key={address} address={address} />
-          })
-        }
+        <div className="tickets">
+          {
+            this.props.tickets.map((address) => {
+              return <SingleTicket key={address} address={address} />
+            })
+          }
+        </div>
       </div>
     )
   }
