@@ -161,3 +161,25 @@ form div {
   border-radius: 4px;
   height: 25px;
 }
+
+
+/* Error Styles */
+
+.error {
+  border: 1px solid;
+  margin: 10px 0px;
+  padding:15px 10px 15px 50px;
+  color: #D8000C;
+  background-color: #FFBABA;
+  text-align: center;
+}
+
+/* Loading Styles */
+
+.loading {
+  border: 1px solid;
+  margin: 10px 0px;
+  padding:15px 10px 15px 50px;
+  color: #00529B;
+  background-color: #BDE5F8;
+}
