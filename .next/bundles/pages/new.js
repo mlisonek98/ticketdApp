@@ -1,10 +1,10 @@
 module.exports =
 
-        __NEXT_REGISTER_PAGE('/', function() {
+        __NEXT_REGISTER_PAGE('/new', function() {
           var comp = 
-      webpackJsonp([4],{
+      webpackJsonp([5],{
 
-/***/ "./Components/Nav.js":
+/***/ "./Components/BackNav.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14,7 +14,7 @@ module.exports =
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__routes___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__routes__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__static_style_css__ = __webpack_require__("./static/style.css");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__static_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__static_style_css__);
-var _jsxFileName = '/Users/Marko/Documents/FullStack-Junior/ticketSellingDApp/Components/Nav.js';
+var _jsxFileName = '/Users/Marko/Documents/FullStack-Junior/ticketSellingDApp/Components/BackNav.js';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -34,16 +34,16 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
-var Nav = function (_Component) {
-  _inherits(Nav, _Component);
+var BackNav = function (_Component) {
+  _inherits(BackNav, _Component);
 
-  function Nav() {
-    _classCallCheck(this, Nav);
+  function BackNav() {
+    _classCallCheck(this, BackNav);
 
-    return _possibleConstructorReturn(this, (Nav.__proto__ || Object.getPrototypeOf(Nav)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (BackNav.__proto__ || Object.getPrototypeOf(BackNav)).apply(this, arguments));
   }
 
-  _createClass(Nav, [{
+  _createClass(BackNav, [{
     key: 'render',
     value: function render() {
 
@@ -65,7 +65,7 @@ var Nav = function (_Component) {
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           __WEBPACK_IMPORTED_MODULE_1__routes__["Link"],
-          { route: '/new', __source: {
+          { route: '/', __source: {
               fileName: _jsxFileName,
               lineNumber: 13
             }
@@ -77,7 +77,7 @@ var Nav = function (_Component) {
                 lineNumber: 14
               }
             },
-            'Sell Ticket'
+            'Home'
           )
         )
       );
@@ -89,10 +89,10 @@ var Nav = function (_Component) {
     }
   }]);
 
-  return Nav;
+  return BackNav;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
-var _default = Nav;
+var _default = BackNav;
 
 
 /* harmony default export */ __webpack_exports__["a"] = (_default);
@@ -107,350 +107,13 @@ var _default = Nav;
     return;
   }
 
-  reactHotLoader.register(Nav, 'Nav', '/Users/Marko/Documents/FullStack-Junior/ticketSellingDApp/Components/Nav.js');
-  reactHotLoader.register(_default, 'default', '/Users/Marko/Documents/FullStack-Junior/ticketSellingDApp/Components/Nav.js');
+  reactHotLoader.register(BackNav, 'BackNav', '/Users/Marko/Documents/FullStack-Junior/ticketSellingDApp/Components/BackNav.js');
+  reactHotLoader.register(_default, 'default', '/Users/Marko/Documents/FullStack-Junior/ticketSellingDApp/Components/BackNav.js');
   leaveModule(module);
 })();
 
 ;
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./node_modules/webpack/buildin/harmony-module.js")(module)))
-
-/***/ }),
-
-/***/ "./Components/SingleTicket.js":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__ = __webpack_require__("./node_modules/babel-runtime/regenerator/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__("./node_modules/react/cjs/react.development.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Ethereum_ticket__ = __webpack_require__("./Ethereum/ticket.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Ethereum_web3__ = __webpack_require__("./Ethereum/web3.js");
-
-var _jsxFileName = '/Users/Marko/Documents/FullStack-Junior/ticketSellingDApp/Components/SingleTicket.js';
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-(function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").enterModule;
-
-  enterModule && enterModule(module);
-})();
-
-function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-
-var SingleTicket = function (_Component) {
-  _inherits(SingleTicket, _Component);
-
-  function SingleTicket(props) {
-    _classCallCheck(this, SingleTicket);
-
-    var _this = _possibleConstructorReturn(this, (SingleTicket.__proto__ || Object.getPrototypeOf(SingleTicket)).call(this, props));
-
-    _this.state = {
-      concert: [],
-      price: '',
-      loading: false,
-      error: '',
-      deleted: false
-    };
-    _this.loadInfo = _this.loadInfo.bind(_this);
-    _this.buyTicket = _this.buyTicket.bind(_this);
-    return _this;
-  }
-
-  _createClass(SingleTicket, [{
-    key: 'componentDidMount',
-    value: function () {
-      var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee() {
-        var ticket, ticketInfo, info, ticketPrice;
-        return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                _context.prev = 0;
-                ticket = Object(__WEBPACK_IMPORTED_MODULE_2__Ethereum_ticket__["a" /* default */])(this.props.address);
-                _context.next = 4;
-                return ticket.methods.concertInfo().call();
-
-              case 4:
-                ticketInfo = _context.sent;
-                info = ticketInfo.split('/');
-                _context.next = 8;
-                return ticket.methods.ticketPrice().call();
-
-              case 8:
-                ticketPrice = _context.sent;
-
-                this.loadInfo(info, ticketPrice);
-                _context.next = 16;
-                break;
-
-              case 12:
-                _context.prev = 12;
-                _context.t0 = _context['catch'](0);
-
-                console.log(_context.t0);
-                this.setState({ deleted: true });
-
-              case 16:
-              case 'end':
-                return _context.stop();
-            }
-          }
-        }, _callee, this, [[0, 12]]);
-      }));
-
-      function componentDidMount() {
-        return _ref.apply(this, arguments);
-      }
-
-      return componentDidMount;
-    }()
-  }, {
-    key: 'loadInfo',
-    value: function loadInfo(info, price) {
-      this.setState({ concert: info });
-      this.setState({ price: '' + price });
-    }
-  }, {
-    key: 'buyTicket',
-    value: function () {
-      var _ref2 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee2(evt) {
-        var ticket, accounts;
-        return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
-          while (1) {
-            switch (_context2.prev = _context2.next) {
-              case 0:
-                evt.preventDefault();
-                ticket = Object(__WEBPACK_IMPORTED_MODULE_2__Ethereum_ticket__["a" /* default */])(this.props.address);
-
-                this.setState({ loading: true });
-
-                _context2.prev = 3;
-                _context2.next = 6;
-                return __WEBPACK_IMPORTED_MODULE_3__Ethereum_web3__["a" /* default */].eth.getAccounts();
-
-              case 6:
-                accounts = _context2.sent;
-                _context2.next = 9;
-                return ticket.methods.buyTicket().send({
-                  from: accounts[0],
-                  value: this.state.price
-                });
-
-              case 9:
-                _context2.next = 14;
-                break;
-
-              case 11:
-                _context2.prev = 11;
-                _context2.t0 = _context2['catch'](3);
-
-                this.setState({ error: _context2.t0.message });
-
-              case 14:
-
-                this.setState({ loading: false });
-
-              case 15:
-              case 'end':
-                return _context2.stop();
-            }
-          }
-        }, _callee2, this, [[3, 11]]);
-      }));
-
-      function buyTicket(_x) {
-        return _ref2.apply(this, arguments);
-      }
-
-      return buyTicket;
-    }()
-  }, {
-    key: 'render',
-    value: function render() {
-
-      return this.state.deleted ? null : __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-        'div',
-        {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 61
-          }
-        },
-        __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-          'div',
-          { className: 'ticket', __source: {
-              fileName: _jsxFileName,
-              lineNumber: 62
-            }
-          },
-          __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-            'div',
-            { className: 'ticketHeader', __source: {
-                fileName: _jsxFileName,
-                lineNumber: 63
-              }
-            },
-            __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-              'h1',
-              {
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 64
-                }
-              },
-              this.state.concert[0]
-            ),
-            __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-              'h2',
-              {
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 65
-                }
-              },
-              this.state.price + ' wei'
-            )
-          ),
-          __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-            'div',
-            { className: 'ticketmeta', __source: {
-                fileName: _jsxFileName,
-                lineNumber: 67
-              }
-            },
-            __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-              'h4',
-              {
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 68
-                }
-              },
-              'Starts at ' + this.state.concert[1]
-            ),
-            __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-              'h5',
-              {
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 69
-                }
-              },
-              this.state.concert[2] + ' in ',
-              this.state.concert[3]
-            )
-          ),
-          __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-            'div',
-            {
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 71
-              }
-            },
-            __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-              'button',
-              { className: 'ticketButton', type: 'submit', onClick: this.buyTicket, __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 72
-                }
-              },
-              'Buy'
-            )
-          ),
-          !this.state.loading ? null : __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-            'div',
-            { className: 'loading', __source: {
-                fileName: _jsxFileName,
-                lineNumber: 77
-              }
-            },
-            __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-              'h4',
-              {
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 78
-                }
-              },
-              'This takes 15-30 Seonds, please wait!'
-            )
-          ),
-          this.state.error === '' ? null : __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-            'div',
-            { className: 'error', __source: {
-                fileName: _jsxFileName,
-                lineNumber: 84
-              }
-            },
-            __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
-              'h4',
-              {
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 85
-                }
-              },
-              'Error! ',
-              this.state.error
-            )
-          )
-        )
-      );
-    }
-  }, {
-    key: '__reactstandin__regenerateByEval',
-    value: function __reactstandin__regenerateByEval(key, code) {
-      this[key] = eval(code);
-    }
-  }]);
-
-  return SingleTicket;
-}(__WEBPACK_IMPORTED_MODULE_1_react__["Component"]);
-
-var _default = SingleTicket;
-
-
-/* harmony default export */ __webpack_exports__["a"] = (_default);
-;
-
-(function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/patch.js").default;
-
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").leaveModule;
-
-  if (!reactHotLoader) {
-    return;
-  }
-
-  reactHotLoader.register(SingleTicket, 'SingleTicket', '/Users/Marko/Documents/FullStack-Junior/ticketSellingDApp/Components/SingleTicket.js');
-  reactHotLoader.register(_default, 'default', '/Users/Marko/Documents/FullStack-Junior/ticketSellingDApp/Components/SingleTicket.js');
-  leaveModule(module);
-})();
-
-;
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./node_modules/webpack/buildin/harmony-module.js")(module)))
-
-/***/ }),
-
-/***/ "./Ethereum/build/Tickets.json":
-/***/ (function(module, exports) {
-
-module.exports = {"assembly":{".code":[{"begin":376,"end":818,"name":"PUSH","value":"80"},{"begin":376,"end":818,"name":"PUSH","value":"40"},{"begin":376,"end":818,"name":"MSTORE"},{"begin":488,"end":653,"name":"PUSH","value":"40"},{"begin":488,"end":653,"name":"MLOAD"},{"begin":488,"end":653,"name":"PUSHSIZE"},{"begin":488,"end":653,"name":"CODESIZE"},{"begin":488,"end":653,"name":"SUB"},{"begin":488,"end":653,"name":"DUP1"},{"begin":488,"end":653,"name":"PUSHSIZE"},{"begin":488,"end":653,"name":"DUP4"},{"begin":488,"end":653,"name":"CODECOPY"},{"begin":488,"end":653,"name":"DUP2"},{"begin":488,"end":653,"name":"ADD"},{"begin":488,"end":653,"name":"PUSH","value":"40"},{"begin":488,"end":653,"name":"SWAP1"},{"begin":488,"end":653,"name":"DUP2"},{"begin":488,"end":653,"name":"MSTORE"},{"begin":488,"end":653,"name":"DUP2"},{"begin":488,"end":653,"name":"MLOAD"},{"begin":488,"end":653,"name":"PUSH","value":"20"},{"begin":488,"end":653,"name":"DUP1"},{"begin":488,"end":653,"name":"DUP5"},{"begin":488,"end":653,"name":"ADD"},{"begin":488,"end":653,"name":"MLOAD"},{"begin":488,"end":653,"name":"SWAP3"},{"begin":488,"end":653,"name":"DUP5"},{"begin":488,"end":653,"name":"ADD"},{"begin":488,"end":653,"name":"MLOAD"},{"begin":572,"end":579,"name":"PUSH","value":"0"},{"begin":572,"end":589,"name":"DUP1"},{"begin":572,"end":589,"name":"SLOAD"},{"begin":-1,"end":-1,"name":"PUSH","value":"1"},{"begin":-1,"end":-1,"name":"PUSH","value":"A0"},{"begin":-1,"end":-1,"name":"PUSH","value":"2"},{"begin":-1,"end":-1,"name":"EXP"},{"begin":-1,"end":-1,"name":"SUB"},{"begin":-1,"end":-1,"name":"NOT"},{"begin":572,"end":589,"name":"AND"},{"begin":-1,"end":-1,"name":"PUSH","value":"1"},{"begin":-1,"end":-1,"name":"PUSH","value":"A0"},{"begin":-1,"end":-1,"name":"PUSH","value":"2"},{"begin":-1,"end":-1,"name":"EXP"},{"begin":-1,"end":-1,"name":"SUB"},{"begin":572,"end":589,"name":"DUP4"},{"begin":572,"end":589,"name":"AND"},{"begin":572,"end":589,"name":"OR"},{"begin":572,"end":589,"name":"SWAP1"},{"begin":572,"end":589,"name":"SSTORE"},{"begin":488,"end":653,"name":"SWAP3"},{"begin":488,"end":653,"name":"SWAP1"},{"begin":488,"end":653,"name":"SWAP4"},{"begin":488,"end":653,"name":"ADD"},{"begin":599,"end":617,"name":"DUP1"},{"begin":599,"end":617,"name":"MLOAD"},{"begin":488,"end":653,"name":"SWAP2"},{"begin":488,"end":653,"name":"SWAP4"},{"begin":488,"end":653,"name":"SWAP1"},{"begin":488,"end":653,"name":"SWAP3"},{"begin":488,"end":653,"name":"SWAP2"},{"begin":599,"end":617,"name":"PUSH [tag]","value":"3"},{"begin":599,"end":617,"name":"SWAP2"},{"begin":599,"end":610,"name":"PUSH","value":"2"},{"begin":599,"end":610,"name":"SWAP2"},{"begin":599,"end":617,"name":"SWAP1"},{"begin":599,"end":617,"name":"DUP6"},{"begin":599,"end":617,"name":"ADD"},{"begin":599,"end":617,"name":"SWAP1"},{"begin":599,"end":617,"name":"PUSH [tag]","value":"4"},{"begin":599,"end":617,"name":"JUMP","value":"[in]"},{"begin":599,"end":617,"name":"tag","value":"3"},{"begin":599,"end":617,"name":"JUMPDEST"},{"begin":-1,"end":-1,"name":"POP"},{"begin":-1,"end":-1,"name":"POP"},{"begin":-1,"end":-1,"name":"POP"},{"begin":627,"end":638,"name":"PUSH","value":"1"},{"begin":627,"end":646,"name":"SSTORE"},{"begin":376,"end":818,"name":"PUSH [tag]","value":"5"},{"begin":376,"end":818,"name":"JUMP"},{"begin":376,"end":818,"name":"tag","value":"4"},{"begin":376,"end":818,"name":"JUMPDEST"},{"begin":376,"end":818,"name":"DUP3"},{"begin":376,"end":818,"name":"DUP1"},{"begin":376,"end":818,"name":"SLOAD"},{"begin":376,"end":818,"name":"PUSH","value":"1"},{"begin":376,"end":818,"name":"DUP2"},{"begin":376,"end":818,"name":"PUSH","value":"1"},{"begin":376,"end":818,"name":"AND"},{"begin":376,"end":818,"name":"ISZERO"},{"begin":376,"end":818,"name":"PUSH","value":"100"},{"begin":376,"end":818,"name":"MUL"},{"begin":376,"end":818,"name":"SUB"},{"begin":376,"end":818,"name":"AND"},{"begin":376,"end":818,"name":"PUSH","value":"2"},{"begin":376,"end":818,"name":"SWAP1"},{"begin":376,"end":818,"name":"DIV"},{"begin":376,"end":818,"name":"SWAP1"},{"begin":376,"end":818,"name":"PUSH","value":"0"},{"begin":376,"end":818,"name":"MSTORE"},{"begin":376,"end":818,"name":"PUSH","value":"20"},{"begin":376,"end":818,"name":"PUSH","value":"0"},{"begin":376,"end":818,"name":"KECCAK256"},{"begin":376,"end":818,"name":"SWAP1"},{"begin":376,"end":818,"name":"PUSH","value":"1F"},{"begin":376,"end":818,"name":"ADD"},{"begin":376,"end":818,"name":"PUSH","value":"20"},{"begin":376,"end":818,"name":"SWAP1"},{"begin":376,"end":818,"name":"DIV"},{"begin":376,"end":818,"name":"DUP2"},{"begin":376,"end":818,"name":"ADD"},{"begin":376,"end":818,"name":"SWAP3"},{"begin":376,"end":818,"name":"DUP3"},{"begin":376,"end":818,"name":"PUSH","value":"1F"},{"begin":376,"end":818,"name":"LT"},{"begin":376,"end":818,"name":"PUSH [tag]","value":"7"},{"begin":376,"end":818,"name":"JUMPI"},{"begin":376,"end":818,"name":"DUP1"},{"begin":376,"end":818,"name":"MLOAD"},{"begin":376,"end":818,"name":"PUSH","value":"FF"},{"begin":376,"end":818,"name":"NOT"},{"begin":376,"end":818,"name":"AND"},{"begin":376,"end":818,"name":"DUP4"},{"begin":376,"end":818,"name":"DUP1"},{"begin":376,"end":818,"name":"ADD"},{"begin":376,"end":818,"name":"OR"},{"begin":376,"end":818,"name":"DUP6"},{"begin":376,"end":818,"name":"SSTORE"},{"begin":376,"end":818,"name":"PUSH [tag]","value":"9"},{"begin":376,"end":818,"name":"JUMP"},{"begin":376,"end":818,"name":"tag","value":"7"},{"begin":376,"end":818,"name":"JUMPDEST"},{"begin":376,"end":818,"name":"DUP3"},{"begin":376,"end":818,"name":"DUP1"},{"begin":376,"end":818,"name":"ADD"},{"begin":376,"end":818,"name":"PUSH","value":"1"},{"begin":376,"end":818,"name":"ADD"},{"begin":376,"end":818,"name":"DUP6"},{"begin":376,"end":818,"name":"SSTORE"},{"begin":376,"end":818,"name":"DUP3"},{"begin":376,"end":818,"name":"ISZERO"},{"begin":376,"end":818,"name":"PUSH [tag]","value":"9"},{"begin":376,"end":818,"name":"JUMPI"},{"begin":376,"end":818,"name":"SWAP2"},{"begin":376,"end":818,"name":"DUP3"},{"begin":376,"end":818,"name":"ADD"},{"begin":376,"end":818,"name":"tag","value":"8"},{"begin":376,"end":818,"name":"JUMPDEST"},{"begin":376,"end":818,"name":"DUP3"},{"begin":376,"end":818,"name":"DUP2"},{"begin":376,"end":818,"name":"GT"},{"begin":376,"end":818,"name":"ISZERO"},{"begin":376,"end":818,"name":"PUSH [tag]","value":"9"},{"begin":376,"end":818,"name":"JUMPI"},{"begin":376,"end":818,"name":"DUP3"},{"begin":376,"end":818,"name":"MLOAD"},{"begin":376,"end":818,"name":"DUP3"},{"begin":376,"end":818,"name":"SSTORE"},{"begin":376,"end":818,"name":"SWAP2"},{"begin":376,"end":818,"name":"PUSH","value":"20"},{"begin":376,"end":818,"name":"ADD"},{"begin":376,"end":818,"name":"SWAP2"},{"begin":376,"end":818,"name":"SWAP1"},{"begin":376,"end":818,"name":"PUSH","value":"1"},{"begin":376,"end":818,"name":"ADD"},{"begin":376,"end":818,"name":"SWAP1"},{"begin":376,"end":818,"name":"PUSH [tag]","value":"8"},{"begin":376,"end":818,"name":"JUMP"},{"begin":376,"end":818,"name":"tag","value":"9"},{"begin":376,"end":818,"name":"JUMPDEST"},{"begin":-1,"end":-1,"name":"POP"},{"begin":376,"end":818,"name":"PUSH [tag]","value":"10"},{"begin":376,"end":818,"name":"SWAP3"},{"begin":376,"end":818,"name":"SWAP2"},{"begin":-1,"end":-1,"name":"POP"},{"begin":376,"end":818,"name":"PUSH [tag]","value":"11"},{"begin":376,"end":818,"name":"JUMP","value":"[in]"},{"begin":376,"end":818,"name":"tag","value":"10"},{"begin":376,"end":818,"name":"JUMPDEST"},{"begin":376,"end":818,"name":"POP"},{"begin":376,"end":818,"name":"SWAP1"},{"begin":376,"end":818,"name":"JUMP","value":"[out]"},{"begin":376,"end":818,"name":"tag","value":"11"},{"begin":376,"end":818,"name":"JUMPDEST"},{"begin":376,"end":818,"name":"PUSH [tag]","value":"12"},{"begin":376,"end":818,"name":"SWAP2"},{"begin":376,"end":818,"name":"SWAP1"},{"begin":376,"end":818,"name":"tag","value":"13"},{"begin":376,"end":818,"name":"JUMPDEST"},{"begin":376,"end":818,"name":"DUP1"},{"begin":376,"end":818,"name":"DUP3"},{"begin":376,"end":818,"name":"GT"},{"begin":376,"end":818,"name":"ISZERO"},{"begin":376,"end":818,"name":"PUSH [tag]","value":"10"},{"begin":376,"end":818,"name":"JUMPI"},{"begin":376,"end":818,"name":"PUSH","value":"0"},{"begin":376,"end":818,"name":"DUP2"},{"begin":376,"end":818,"name":"SSTORE"},{"begin":376,"end":818,"name":"PUSH","value":"1"},{"begin":376,"end":818,"name":"ADD"},{"begin":376,"end":818,"name":"PUSH [tag]","value":"13"},{"begin":376,"end":818,"name":"JUMP"},{"begin":376,"end":818,"name":"tag","value":"12"},{"begin":376,"end":818,"name":"JUMPDEST"},{"begin":376,"end":818,"name":"SWAP1"},{"begin":376,"end":818,"name":"JUMP","value":"[out]"},{"begin":376,"end":818,"name":"tag","value":"5"},{"begin":376,"end":818,"name":"JUMPDEST"},{"begin":376,"end":818,"name":"PUSH #[$]","value":"0000000000000000000000000000000000000000000000000000000000000000"},{"begin":376,"end":818,"name":"DUP1"},{"begin":376,"end":818,"name":"PUSH [$]","value":"0000000000000000000000000000000000000000000000000000000000000000"},{"begin":376,"end":818,"name":"PUSH","value":"0"},{"begin":376,"end":818,"name":"CODECOPY"},{"begin":376,"end":818,"name":"PUSH","value":"0"},{"begin":376,"end":818,"name":"RETURN"}],".data":{"0":{".auxdata":"a165627a7a723058204bcbccfb075a52868cff90af82f014128ebdeca435c782ee23188fa4f78b708e0029",".code":[{"begin":376,"end":818,"name":"PUSH","value":"80"},{"begin":376,"end":818,"name":"PUSH","value":"40"},{"begin":376,"end":818,"name":"MSTORE"},{"begin":376,"end":818,"name":"PUSH","value":"4"},{"begin":376,"end":818,"name":"CALLDATASIZE"},{"begin":376,"end":818,"name":"LT"},{"begin":376,"end":818,"name":"PUSH [tag]","value":"1"},{"begin":376,"end":818,"name":"JUMPI"},{"begin":376,"end":818,"name":"PUSH","value":"FFFFFFFF"},{"begin":376,"end":818,"name":"PUSH","value":"100000000000000000000000000000000000000000000000000000000"},{"begin":376,"end":818,"name":"PUSH","value":"0"},{"begin":376,"end":818,"name":"CALLDATALOAD"},{"begin":376,"end":818,"name":"DIV"},{"begin":376,"end":818,"name":"AND"},{"begin":376,"end":818,"name":"PUSH","value":"1209B1F6"},{"begin":376,"end":818,"name":"DUP2"},{"begin":376,"end":818,"name":"EQ"},{"begin":376,"end":818,"name":"PUSH [tag]","value":"2"},{"begin":376,"end":818,"name":"JUMPI"},{"begin":376,"end":818,"name":"DUP1"},{"begin":376,"end":818,"name":"PUSH","value":"481C6A75"},{"begin":376,"end":818,"name":"EQ"},{"begin":376,"end":818,"name":"PUSH [tag]","value":"3"},{"begin":376,"end":818,"name":"JUMPI"},{"begin":376,"end":818,"name":"DUP1"},{"begin":376,"end":818,"name":"PUSH","value":"AFFF146A"},{"begin":376,"end":818,"name":"EQ"},{"begin":376,"end":818,"name":"PUSH [tag]","value":"4"},{"begin":376,"end":818,"name":"JUMPI"},{"begin":376,"end":818,"name":"DUP1"},{"begin":376,"end":818,"name":"PUSH","value":"EDCA914C"},{"begin":376,"end":818,"name":"EQ"},{"begin":376,"end":818,"name":"PUSH [tag]","value":"5"},{"begin":376,"end":818,"name":"JUMPI"},{"begin":376,"end":818,"name":"tag","value":"1"},{"begin":376,"end":818,"name":"JUMPDEST"},{"begin":376,"end":818,"name":"PUSH","value":"0"},{"begin":376,"end":818,"name":"DUP1"},{"begin":376,"end":818,"name":"REVERT"},{"begin":427,"end":450,"name":"tag","value":"2"},{"begin":427,"end":450,"name":"JUMPDEST"},{"begin":427,"end":450,"name":"CALLVALUE"},{"begin":8,"end":17,"name":"DUP1"},{"begin":5,"end":7,"name":"ISZERO"},{"begin":5,"end":7,"name":"PUSH [tag]","value":"6"},{"begin":5,"end":7,"name":"JUMPI"},{"begin":30,"end":31,"name":"PUSH","value":"0"},{"begin":27,"end":28,"name":"DUP1"},{"begin":20,"end":32,"name":"REVERT"},{"begin":5,"end":7,"name":"tag","value":"6"},{"begin":5,"end":7,"name":"JUMPDEST"},{"begin":427,"end":450,"name":"POP"},{"begin":427,"end":450,"name":"PUSH [tag]","value":"7"},{"begin":427,"end":450,"name":"PUSH [tag]","value":"8"},{"begin":427,"end":450,"name":"JUMP"},{"begin":427,"end":450,"name":"tag","value":"7"},{"begin":427,"end":450,"name":"JUMPDEST"},{"begin":427,"end":450,"name":"PUSH","value":"40"},{"begin":427,"end":450,"name":"DUP1"},{"begin":427,"end":450,"name":"MLOAD"},{"begin":427,"end":450,"name":"SWAP2"},{"begin":427,"end":450,"name":"DUP3"},{"begin":427,"end":450,"name":"MSTORE"},{"begin":427,"end":450,"name":"MLOAD"},{"begin":427,"end":450,"name":"SWAP1"},{"begin":427,"end":450,"name":"DUP2"},{"begin":427,"end":450,"name":"SWAP1"},{"begin":427,"end":450,"name":"SUB"},{"begin":427,"end":450,"name":"PUSH","value":"20"},{"begin":427,"end":450,"name":"ADD"},{"begin":427,"end":450,"name":"SWAP1"},{"begin":427,"end":450,"name":"RETURN"},{"begin":399,"end":421,"name":"tag","value":"3"},{"begin":399,"end":421,"name":"JUMPDEST"},{"begin":399,"end":421,"name":"CALLVALUE"},{"begin":8,"end":17,"name":"DUP1"},{"begin":5,"end":7,"name":"ISZERO"},{"begin":5,"end":7,"name":"PUSH [tag]","value":"9"},{"begin":5,"end":7,"name":"JUMPI"},{"begin":30,"end":31,"name":"PUSH","value":"0"},{"begin":27,"end":28,"name":"DUP1"},{"begin":20,"end":32,"name":"REVERT"},{"begin":5,"end":7,"name":"tag","value":"9"},{"begin":5,"end":7,"name":"JUMPDEST"},{"begin":399,"end":421,"name":"POP"},{"begin":399,"end":421,"name":"PUSH [tag]","value":"10"},{"begin":399,"end":421,"name":"PUSH [tag]","value":"11"},{"begin":399,"end":421,"name":"JUMP"},{"begin":399,"end":421,"name":"tag","value":"10"},{"begin":399,"end":421,"name":"JUMPDEST"},{"begin":399,"end":421,"name":"PUSH","value":"40"},{"begin":399,"end":421,"name":"DUP1"},{"begin":399,"end":421,"name":"MLOAD"},{"begin":399,"end":421,"name":"PUSH","value":"FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"},{"begin":399,"end":421,"name":"SWAP1"},{"begin":399,"end":421,"name":"SWAP3"},{"begin":399,"end":421,"name":"AND"},{"begin":399,"end":421,"name":"DUP3"},{"begin":399,"end":421,"name":"MSTORE"},{"begin":399,"end":421,"name":"MLOAD"},{"begin":399,"end":421,"name":"SWAP1"},{"begin":399,"end":421,"name":"DUP2"},{"begin":399,"end":421,"name":"SWAP1"},{"begin":399,"end":421,"name":"SUB"},{"begin":399,"end":421,"name":"PUSH","value":"20"},{"begin":399,"end":421,"name":"ADD"},{"begin":399,"end":421,"name":"SWAP1"},{"begin":399,"end":421,"name":"RETURN"},{"begin":456,"end":481,"name":"tag","value":"4"},{"begin":456,"end":481,"name":"JUMPDEST"},{"begin":456,"end":481,"name":"CALLVALUE"},{"begin":8,"end":17,"name":"DUP1"},{"begin":5,"end":7,"name":"ISZERO"},{"begin":5,"end":7,"name":"PUSH [tag]","value":"12"},{"begin":5,"end":7,"name":"JUMPI"},{"begin":30,"end":31,"name":"PUSH","value":"0"},{"begin":27,"end":28,"name":"DUP1"},{"begin":20,"end":32,"name":"REVERT"},{"begin":5,"end":7,"name":"tag","value":"12"},{"begin":5,"end":7,"name":"JUMPDEST"},{"begin":456,"end":481,"name":"POP"},{"begin":456,"end":481,"name":"PUSH [tag]","value":"13"},{"begin":456,"end":481,"name":"PUSH [tag]","value":"14"},{"begin":456,"end":481,"name":"JUMP"},{"begin":456,"end":481,"name":"tag","value":"13"},{"begin":456,"end":481,"name":"JUMPDEST"},{"begin":456,"end":481,"name":"PUSH","value":"40"},{"begin":456,"end":481,"name":"DUP1"},{"begin":456,"end":481,"name":"MLOAD"},{"begin":456,"end":481,"name":"PUSH","value":"20"},{"begin":456,"end":481,"name":"DUP1"},{"begin":456,"end":481,"name":"DUP3"},{"begin":456,"end":481,"name":"MSTORE"},{"begin":456,"end":481,"name":"DUP4"},{"begin":456,"end":481,"name":"MLOAD"},{"begin":456,"end":481,"name":"DUP2"},{"begin":456,"end":481,"name":"DUP4"},{"begin":456,"end":481,"name":"ADD"},{"begin":456,"end":481,"name":"MSTORE"},{"begin":456,"end":481,"name":"DUP4"},{"begin":456,"end":481,"name":"MLOAD"},{"begin":456,"end":481,"name":"SWAP2"},{"begin":456,"end":481,"name":"SWAP3"},{"begin":456,"end":481,"name":"DUP4"},{"begin":456,"end":481,"name":"SWAP3"},{"begin":456,"end":481,"name":"SWAP1"},{"begin":456,"end":481,"name":"DUP4"},{"begin":456,"end":481,"name":"ADD"},{"begin":456,"end":481,"name":"SWAP2"},{"begin":456,"end":481,"name":"DUP6"},{"begin":456,"end":481,"name":"ADD"},{"begin":456,"end":481,"name":"SWAP1"},{"begin":456,"end":481,"name":"DUP1"},{"begin":456,"end":481,"name":"DUP4"},{"begin":456,"end":481,"name":"DUP4"},{"begin":456,"end":481,"name":"PUSH","value":"0"},{"begin":8,"end":108,"name":"tag","value":"15"},{"begin":8,"end":108,"name":"JUMPDEST"},{"begin":33,"end":36,"name":"DUP4"},{"begin":30,"end":31,"name":"DUP2"},{"begin":27,"end":37,"name":"LT"},{"begin":8,"end":108,"name":"ISZERO"},{"begin":8,"end":108,"name":"PUSH [tag]","value":"16"},{"begin":8,"end":108,"name":"JUMPI"},{"begin":90,"end":101,"name":"DUP2"},{"begin":90,"end":101,"name":"DUP2"},{"begin":90,"end":101,"name":"ADD"},{"begin":84,"end":102,"name":"MLOAD"},{"begin":71,"end":82,"name":"DUP4"},{"begin":71,"end":82,"name":"DUP3"},{"begin":71,"end":82,"name":"ADD"},{"begin":64,"end":103,"name":"MSTORE"},{"begin":52,"end":54,"name":"PUSH","value":"20"},{"begin":45,"end":55,"name":"ADD"},{"begin":8,"end":108,"name":"PUSH [tag]","value":"15"},{"begin":8,"end":108,"name":"JUMP"},{"begin":8,"end":108,"name":"tag","value":"16"},{"begin":8,"end":108,"name":"JUMPDEST"},{"begin":12,"end":26,"name":"POP"},{"begin":456,"end":481,"name":"POP"},{"begin":456,"end":481,"name":"POP"},{"begin":456,"end":481,"name":"POP"},{"begin":456,"end":481,"name":"SWAP1"},{"begin":456,"end":481,"name":"POP"},{"begin":456,"end":481,"name":"SWAP1"},{"begin":456,"end":481,"name":"DUP2"},{"begin":456,"end":481,"name":"ADD"},{"begin":456,"end":481,"name":"SWAP1"},{"begin":456,"end":481,"name":"PUSH","value":"1F"},{"begin":456,"end":481,"name":"AND"},{"begin":456,"end":481,"name":"DUP1"},{"begin":456,"end":481,"name":"ISZERO"},{"begin":456,"end":481,"name":"PUSH [tag]","value":"18"},{"begin":456,"end":481,"name":"JUMPI"},{"begin":456,"end":481,"name":"DUP1"},{"begin":456,"end":481,"name":"DUP3"},{"begin":456,"end":481,"name":"SUB"},{"begin":456,"end":481,"name":"DUP1"},{"begin":456,"end":481,"name":"MLOAD"},{"begin":456,"end":481,"name":"PUSH","value":"1"},{"begin":456,"end":481,"name":"DUP4"},{"begin":456,"end":481,"name":"PUSH","value":"20"},{"begin":456,"end":481,"name":"SUB"},{"begin":456,"end":481,"name":"PUSH","value":"100"},{"begin":456,"end":481,"name":"EXP"},{"begin":456,"end":481,"name":"SUB"},{"begin":456,"end":481,"name":"NOT"},{"begin":456,"end":481,"name":"AND"},{"begin":456,"end":481,"name":"DUP2"},{"begin":456,"end":481,"name":"MSTORE"},{"begin":456,"end":481,"name":"PUSH","value":"20"},{"begin":456,"end":481,"name":"ADD"},{"begin":456,"end":481,"name":"SWAP2"},{"begin":456,"end":481,"name":"POP"},{"begin":456,"end":481,"name":"tag","value":"18"},{"begin":456,"end":481,"name":"JUMPDEST"},{"begin":456,"end":481,"name":"POP"},{"begin":456,"end":481,"name":"SWAP3"},{"begin":456,"end":481,"name":"POP"},{"begin":456,"end":481,"name":"POP"},{"begin":456,"end":481,"name":"POP"},{"begin":456,"end":481,"name":"PUSH","value":"40"},{"begin":456,"end":481,"name":"MLOAD"},{"begin":456,"end":481,"name":"DUP1"},{"begin":456,"end":481,"name":"SWAP2"},{"begin":456,"end":481,"name":"SUB"},{"begin":456,"end":481,"name":"SWAP1"},{"begin":456,"end":481,"name":"RETURN"},{"begin":659,"end":816,"name":"tag","value":"5"},{"begin":659,"end":816,"name":"JUMPDEST"},{"begin":659,"end":816,"name":"PUSH [tag]","value":"19"},{"begin":659,"end":816,"name":"PUSH [tag]","value":"20"},{"begin":659,"end":816,"name":"JUMP"},{"begin":659,"end":816,"name":"tag","value":"19"},{"begin":659,"end":816,"name":"JUMPDEST"},{"begin":659,"end":816,"name":"STOP"},{"begin":427,"end":450,"name":"tag","value":"8"},{"begin":427,"end":450,"name":"JUMPDEST"},{"begin":427,"end":450,"name":"PUSH","value":"1"},{"begin":427,"end":450,"name":"SLOAD"},{"begin":427,"end":450,"name":"DUP2"},{"begin":427,"end":450,"name":"JUMP","value":"[out]"},{"begin":399,"end":421,"name":"tag","value":"11"},{"begin":399,"end":421,"name":"JUMPDEST"},{"begin":399,"end":421,"name":"PUSH","value":"0"},{"begin":399,"end":421,"name":"SLOAD"},{"begin":399,"end":421,"name":"PUSH","value":"FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"},{"begin":399,"end":421,"name":"AND"},{"begin":399,"end":421,"name":"DUP2"},{"begin":399,"end":421,"name":"JUMP","value":"[out]"},{"begin":456,"end":481,"name":"tag","value":"14"},{"begin":456,"end":481,"name":"JUMPDEST"},{"begin":456,"end":481,"name":"PUSH","value":"2"},{"begin":456,"end":481,"name":"DUP1"},{"begin":456,"end":481,"name":"SLOAD"},{"begin":456,"end":481,"name":"PUSH","value":"40"},{"begin":456,"end":481,"name":"DUP1"},{"begin":456,"end":481,"name":"MLOAD"},{"begin":456,"end":481,"name":"PUSH","value":"20"},{"begin":456,"end":481,"name":"PUSH","value":"1"},{"begin":456,"end":481,"name":"DUP5"},{"begin":456,"end":481,"name":"AND"},{"begin":456,"end":481,"name":"ISZERO"},{"begin":456,"end":481,"name":"PUSH","value":"100"},{"begin":456,"end":481,"name":"MUL"},{"begin":-1,"end":-1,"name":"PUSH","value":"0"},{"begin":-1,"end":-1,"name":"NOT"},{"begin":456,"end":481,"name":"ADD"},{"begin":456,"end":481,"name":"SWAP1"},{"begin":456,"end":481,"name":"SWAP4"},{"begin":456,"end":481,"name":"AND"},{"begin":456,"end":481,"name":"DUP5"},{"begin":456,"end":481,"name":"SWAP1"},{"begin":456,"end":481,"name":"DIV"},{"begin":456,"end":481,"name":"PUSH","value":"1F"},{"begin":456,"end":481,"name":"DUP2"},{"begin":456,"end":481,"name":"ADD"},{"begin":456,"end":481,"name":"DUP5"},{"begin":456,"end":481,"name":"SWAP1"},{"begin":456,"end":481,"name":"DIV"},{"begin":456,"end":481,"name":"DUP5"},{"begin":456,"end":481,"name":"MUL"},{"begin":456,"end":481,"name":"DUP3"},{"begin":456,"end":481,"name":"ADD"},{"begin":456,"end":481,"name":"DUP5"},{"begin":456,"end":481,"name":"ADD"},{"begin":456,"end":481,"name":"SWAP1"},{"begin":456,"end":481,"name":"SWAP3"},{"begin":456,"end":481,"name":"MSTORE"},{"begin":456,"end":481,"name":"DUP2"},{"begin":456,"end":481,"name":"DUP2"},{"begin":456,"end":481,"name":"MSTORE"},{"begin":456,"end":481,"name":"SWAP3"},{"begin":456,"end":481,"name":"SWAP2"},{"begin":456,"end":481,"name":"DUP4"},{"begin":456,"end":481,"name":"ADD"},{"begin":456,"end":481,"name":"DUP3"},{"begin":456,"end":481,"name":"DUP3"},{"begin":456,"end":481,"name":"DUP1"},{"begin":456,"end":481,"name":"ISZERO"},{"begin":456,"end":481,"name":"PUSH [tag]","value":"21"},{"begin":456,"end":481,"name":"JUMPI"},{"begin":456,"end":481,"name":"DUP1"},{"begin":456,"end":481,"name":"PUSH","value":"1F"},{"begin":456,"end":481,"name":"LT"},{"begin":456,"end":481,"name":"PUSH [tag]","value":"22"},{"begin":456,"end":481,"name":"JUMPI"},{"begin":456,"end":481,"name":"PUSH","value":"100"},{"begin":456,"end":481,"name":"DUP1"},{"begin":456,"end":481,"name":"DUP4"},{"begin":456,"end":481,"name":"SLOAD"},{"begin":456,"end":481,"name":"DIV"},{"begin":456,"end":481,"name":"MUL"},{"begin":456,"end":481,"name":"DUP4"},{"begin":456,"end":481,"name":"MSTORE"},{"begin":456,"end":481,"name":"SWAP2"},{"begin":456,"end":481,"name":"PUSH","value":"20"},{"begin":456,"end":481,"name":"ADD"},{"begin":456,"end":481,"name":"SWAP2"},{"begin":456,"end":481,"name":"PUSH [tag]","value":"21"},{"begin":456,"end":481,"name":"JUMP"},{"begin":456,"end":481,"name":"tag","value":"22"},{"begin":456,"end":481,"name":"JUMPDEST"},{"begin":456,"end":481,"name":"DUP3"},{"begin":456,"end":481,"name":"ADD"},{"begin":456,"end":481,"name":"SWAP2"},{"begin":456,"end":481,"name":"SWAP1"},{"begin":456,"end":481,"name":"PUSH","value":"0"},{"begin":456,"end":481,"name":"MSTORE"},{"begin":456,"end":481,"name":"PUSH","value":"20"},{"begin":456,"end":481,"name":"PUSH","value":"0"},{"begin":456,"end":481,"name":"KECCAK256"},{"begin":456,"end":481,"name":"SWAP1"},{"begin":456,"end":481,"name":"tag","value":"23"},{"begin":456,"end":481,"name":"JUMPDEST"},{"begin":456,"end":481,"name":"DUP2"},{"begin":456,"end":481,"name":"SLOAD"},{"begin":456,"end":481,"name":"DUP2"},{"begin":456,"end":481,"name":"MSTORE"},{"begin":456,"end":481,"name":"SWAP1"},{"begin":456,"end":481,"name":"PUSH","value":"1"},{"begin":456,"end":481,"name":"ADD"},{"begin":456,"end":481,"name":"SWAP1"},{"begin":456,"end":481,"name":"PUSH","value":"20"},{"begin":456,"end":481,"name":"ADD"},{"begin":456,"end":481,"name":"DUP1"},{"begin":456,"end":481,"name":"DUP4"},{"begin":456,"end":481,"name":"GT"},{"begin":456,"end":481,"name":"PUSH [tag]","value":"23"},{"begin":456,"end":481,"name":"JUMPI"},{"begin":456,"end":481,"name":"DUP3"},{"begin":456,"end":481,"name":"SWAP1"},{"begin":456,"end":481,"name":"SUB"},{"begin":456,"end":481,"name":"PUSH","value":"1F"},{"begin":456,"end":481,"name":"AND"},{"begin":456,"end":481,"name":"DUP3"},{"begin":456,"end":481,"name":"ADD"},{"begin":456,"end":481,"name":"SWAP2"},{"begin":456,"end":481,"name":"tag","value":"21"},{"begin":456,"end":481,"name":"JUMPDEST"},{"begin":456,"end":481,"name":"POP"},{"begin":456,"end":481,"name":"POP"},{"begin":456,"end":481,"name":"POP"},{"begin":456,"end":481,"name":"POP"},{"begin":456,"end":481,"name":"POP"},{"begin":456,"end":481,"name":"DUP2"},{"begin":456,"end":481,"name":"JUMP","value":"[out]"},{"begin":659,"end":816,"name":"tag","value":"20"},{"begin":659,"end":816,"name":"JUMPDEST"},{"begin":726,"end":737,"name":"PUSH","value":"1"},{"begin":726,"end":737,"name":"SLOAD"},{"begin":713,"end":722,"name":"CALLVALUE"},{"begin":713,"end":737,"name":"EQ"},{"begin":705,"end":738,"name":"PUSH [tag]","value":"25"},{"begin":705,"end":738,"name":"JUMPI"},{"begin":705,"end":738,"name":"PUSH","value":"0"},{"begin":705,"end":738,"name":"DUP1"},{"begin":705,"end":738,"name":"REVERT"},{"begin":705,"end":738,"name":"tag","value":"25"},{"begin":705,"end":738,"name":"JUMPDEST"},{"begin":748,"end":755,"name":"PUSH","value":"0"},{"begin":748,"end":755,"name":"DUP1"},{"begin":748,"end":755,"name":"SLOAD"},{"begin":748,"end":778,"name":"PUSH","value":"40"},{"begin":748,"end":778,"name":"MLOAD"},{"begin":748,"end":755,"name":"PUSH","value":"FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"},{"begin":748,"end":755,"name":"SWAP1"},{"begin":748,"end":755,"name":"SWAP2"},{"begin":748,"end":755,"name":"AND"},{"begin":748,"end":755,"name":"SWAP2"},{"begin":765,"end":769,"name":"ADDRESS"},{"begin":765,"end":777,"name":"BALANCE"},{"begin":748,"end":778,"name":"DUP1"},{"begin":748,"end":778,"name":"ISZERO"},{"begin":748,"end":778,"name":"PUSH","value":"8FC"},{"begin":748,"end":778,"name":"MUL"},{"begin":748,"end":778,"name":"SWAP3"},{"begin":765,"end":777,"name":"SWAP1"},{"begin":765,"end":777,"name":"SWAP2"},{"begin":748,"end":778,"name":"DUP2"},{"begin":748,"end":755,"name":"DUP2"},{"begin":748,"end":778,"name":"DUP2"},{"begin":765,"end":777,"name":"DUP6"},{"begin":748,"end":755,"name":"DUP9"},{"begin":748,"end":778,"name":"DUP9"},{"begin":748,"end":778,"name":"CALL"},{"begin":748,"end":778,"name":"SWAP4"},{"begin":748,"end":778,"name":"POP"},{"begin":748,"end":778,"name":"POP"},{"begin":748,"end":778,"name":"POP"},{"begin":748,"end":778,"name":"POP"},{"begin":748,"end":778,"name":"ISZERO"},{"begin":8,"end":17,"name":"DUP1"},{"begin":5,"end":7,"name":"ISZERO"},{"begin":5,"end":7,"name":"PUSH [tag]","value":"26"},{"begin":5,"end":7,"name":"JUMPI"},{"begin":45,"end":61,"name":"RETURNDATASIZE"},{"begin":42,"end":43,"name":"PUSH","value":"0"},{"begin":39,"end":40,"name":"DUP1"},{"begin":24,"end":62,"name":"RETURNDATACOPY"},{"begin":77,"end":93,"name":"RETURNDATASIZE"},{"begin":74,"end":75,"name":"PUSH","value":"0"},{"begin":67,"end":94,"name":"REVERT"},{"begin":5,"end":7,"name":"tag","value":"26"},{"begin":5,"end":7,"name":"JUMPDEST"},{"begin":-1,"end":-1,"name":"POP"},{"begin":801,"end":808,"name":"PUSH","value":"0"},{"begin":801,"end":808,"name":"SLOAD"},{"begin":801,"end":808,"name":"PUSH","value":"FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"},{"begin":801,"end":808,"name":"AND"},{"begin":788,"end":809,"name":"SELFDESTRUCT"}]}}},"bytecode":"60806040526040516103ba3803806103ba83398101604090815281516020808401519284015160008054600160a060020a031916600160a060020a038316179055929093018051919390929161005b9160029190850190610066565b505050600155610101565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106100a757805160ff19168380011785556100d4565b828001600101855582156100d4579182015b828111156100d45782518255916020019190600101906100b9565b506100e09291506100e4565b5090565b6100fe91905b808211156100e057600081556001016100ea565b90565b6102aa806101106000396000f3006080604052600436106100615763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416631209b1f68114610066578063481c6a751461008d578063afff146a146100cb578063edca914c14610155575b600080fd5b34801561007257600080fd5b5061007b61015f565b60408051918252519081900360200190f35b34801561009957600080fd5b506100a2610165565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b3480156100d757600080fd5b506100e0610181565b6040805160208082528351818301528351919283929083019185019080838360005b8381101561011a578181015183820152602001610102565b50505050905090810190601f1680156101475780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b61015d61020c565b005b60015481565b60005473ffffffffffffffffffffffffffffffffffffffff1681565b6002805460408051602060018416156101000260001901909316849004601f810184900484028201840190925281815292918301828280156102045780601f106101d957610100808354040283529160200191610204565b820191906000526020600020905b8154815290600101906020018083116101e757829003601f168201915b505050505081565b600154341461021a57600080fd5b6000805460405173ffffffffffffffffffffffffffffffffffffffff90911691303180156108fc02929091818181858888f19350505050158015610262573d6000803e3d6000fd5b5060005473ffffffffffffffffffffffffffffffffffffffff16ff00a165627a7a723058204bcbccfb075a52868cff90af82f014128ebdeca435c782ee23188fa4f78b708e0029","functionHashes":{"buyTicket()":"edca914c","concertInfo()":"afff146a","manager()":"481c6a75","ticketPrice()":"1209b1f6"},"gasEstimates":{"creation":[null,136400],"external":{"buyTicket()":null,"concertInfo()":null,"manager()":421,"ticketPrice()":384},"internal":{}},"interface":"[{\"constant\":true,\"inputs\":[],\"name\":\"ticketPrice\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"manager\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"concertInfo\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"buyTicket\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"name\":\"price\",\"type\":\"uint256\"},{\"name\":\"info\",\"type\":\"string\"},{\"name\":\"creator\",\"type\":\"address\"}],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"constructor\"}]","metadata":"{\"compiler\":{\"version\":\"0.4.24+commit.e67f0147\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"ticketPrice\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"manager\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"concertInfo\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"buyTicket\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"name\":\"price\",\"type\":\"uint256\"},{\"name\":\"info\",\"type\":\"string\"},{\"name\":\"creator\",\"type\":\"address\"}],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"\":\"Tickets\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"\":{\"keccak256\":\"0xec5b55fbf6ae6e0a3da54011dfae409e27aa108f1ba951c4160965808f51c41c\",\"urls\":[\"bzzr://e9efab495adaa1c28e599a8c698d1807ff997cc7e4450fc1c9efd7349ccf4f11\"]}},\"version\":1}","opcodes":"PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x40 MLOAD PUSH2 0x3BA CODESIZE SUB DUP1 PUSH2 0x3BA DUP4 CODECOPY DUP2 ADD PUSH1 0x40 SWAP1 DUP2 MSTORE DUP2 MLOAD PUSH1 0x20 DUP1 DUP5 ADD MLOAD SWAP3 DUP5 ADD MLOAD PUSH1 0x0 DUP1 SLOAD PUSH1 0x1 PUSH1 0xA0 PUSH1 0x2 EXP SUB NOT AND PUSH1 0x1 PUSH1 0xA0 PUSH1 0x2 EXP SUB DUP4 AND OR SWAP1 SSTORE SWAP3 SWAP1 SWAP4 ADD DUP1 MLOAD SWAP2 SWAP4 SWAP1 SWAP3 SWAP2 PUSH2 0x5B SWAP2 PUSH1 0x2 SWAP2 SWAP1 DUP6 ADD SWAP1 PUSH2 0x66 JUMP JUMPDEST POP POP POP PUSH1 0x1 SSTORE PUSH2 0x101 JUMP JUMPDEST DUP3 DUP1 SLOAD PUSH1 0x1 DUP2 PUSH1 0x1 AND ISZERO PUSH2 0x100 MUL SUB AND PUSH1 0x2 SWAP1 DIV SWAP1 PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 KECCAK256 SWAP1 PUSH1 0x1F ADD PUSH1 0x20 SWAP1 DIV DUP2 ADD SWAP3 DUP3 PUSH1 0x1F LT PUSH2 0xA7 JUMPI DUP1 MLOAD PUSH1 0xFF NOT AND DUP4 DUP1 ADD OR DUP6 SSTORE PUSH2 0xD4 JUMP JUMPDEST DUP3 DUP1 ADD PUSH1 0x1 ADD DUP6 SSTORE DUP3 ISZERO PUSH2 0xD4 JUMPI SWAP2 DUP3 ADD JUMPDEST DUP3 DUP2 GT ISZERO PUSH2 0xD4 JUMPI DUP3 MLOAD DUP3 SSTORE SWAP2 PUSH1 0x20 ADD SWAP2 SWAP1 PUSH1 0x1 ADD SWAP1 PUSH2 0xB9 JUMP JUMPDEST POP PUSH2 0xE0 SWAP3 SWAP2 POP PUSH2 0xE4 JUMP JUMPDEST POP SWAP1 JUMP JUMPDEST PUSH2 0xFE SWAP2 SWAP1 JUMPDEST DUP1 DUP3 GT ISZERO PUSH2 0xE0 JUMPI PUSH1 0x0 DUP2 SSTORE PUSH1 0x1 ADD PUSH2 0xEA JUMP JUMPDEST SWAP1 JUMP JUMPDEST PUSH2 0x2AA DUP1 PUSH2 0x110 PUSH1 0x0 CODECOPY PUSH1 0x0 RETURN STOP PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH2 0x61 JUMPI PUSH4 0xFFFFFFFF PUSH29 0x100000000000000000000000000000000000000000000000000000000 PUSH1 0x0 CALLDATALOAD DIV AND PUSH4 0x1209B1F6 DUP2 EQ PUSH2 0x66 JUMPI DUP1 PUSH4 0x481C6A75 EQ PUSH2 0x8D JUMPI DUP1 PUSH4 0xAFFF146A EQ PUSH2 0xCB JUMPI DUP1 PUSH4 0xEDCA914C EQ PUSH2 0x155 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0x72 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0x7B PUSH2 0x15F JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD SWAP2 DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0x99 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0xA2 PUSH2 0x165 JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD PUSH20 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF SWAP1 SWAP3 AND DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0xD7 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0xE0 PUSH2 0x181 JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD PUSH1 0x20 DUP1 DUP3 MSTORE DUP4 MLOAD DUP2 DUP4 ADD MSTORE DUP4 MLOAD SWAP2 SWAP3 DUP4 SWAP3 SWAP1 DUP4 ADD SWAP2 DUP6 ADD SWAP1 DUP1 DUP4 DUP4 PUSH1 0x0 JUMPDEST DUP4 DUP2 LT ISZERO PUSH2 0x11A JUMPI DUP2 DUP2 ADD MLOAD DUP4 DUP3 ADD MSTORE PUSH1 0x20 ADD PUSH2 0x102 JUMP JUMPDEST POP POP POP POP SWAP1 POP SWAP1 DUP2 ADD SWAP1 PUSH1 0x1F AND DUP1 ISZERO PUSH2 0x147 JUMPI DUP1 DUP3 SUB DUP1 MLOAD PUSH1 0x1 DUP4 PUSH1 0x20 SUB PUSH2 0x100 EXP SUB NOT AND DUP2 MSTORE PUSH1 0x20 ADD SWAP2 POP JUMPDEST POP SWAP3 POP POP POP PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 RETURN JUMPDEST PUSH2 0x15D PUSH2 0x20C JUMP JUMPDEST STOP JUMPDEST PUSH1 0x1 SLOAD DUP2 JUMP JUMPDEST PUSH1 0x0 SLOAD PUSH20 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF AND DUP2 JUMP JUMPDEST PUSH1 0x2 DUP1 SLOAD PUSH1 0x40 DUP1 MLOAD PUSH1 0x20 PUSH1 0x1 DUP5 AND ISZERO PUSH2 0x100 MUL PUSH1 0x0 NOT ADD SWAP1 SWAP4 AND DUP5 SWAP1 DIV PUSH1 0x1F DUP2 ADD DUP5 SWAP1 DIV DUP5 MUL DUP3 ADD DUP5 ADD SWAP1 SWAP3 MSTORE DUP2 DUP2 MSTORE SWAP3 SWAP2 DUP4 ADD DUP3 DUP3 DUP1 ISZERO PUSH2 0x204 JUMPI DUP1 PUSH1 0x1F LT PUSH2 0x1D9 JUMPI PUSH2 0x100 DUP1 DUP4 SLOAD DIV MUL DUP4 MSTORE SWAP2 PUSH1 0x20 ADD SWAP2 PUSH2 0x204 JUMP JUMPDEST DUP3 ADD SWAP2 SWAP1 PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 KECCAK256 SWAP1 JUMPDEST DUP2 SLOAD DUP2 MSTORE SWAP1 PUSH1 0x1 ADD SWAP1 PUSH1 0x20 ADD DUP1 DUP4 GT PUSH2 0x1E7 JUMPI DUP3 SWAP1 SUB PUSH1 0x1F AND DUP3 ADD SWAP2 JUMPDEST POP POP POP POP POP DUP2 JUMP JUMPDEST PUSH1 0x1 SLOAD CALLVALUE EQ PUSH2 0x21A JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 DUP1 SLOAD PUSH1 0x40 MLOAD PUSH20 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF SWAP1 SWAP2 AND SWAP2 ADDRESS BALANCE DUP1 ISZERO PUSH2 0x8FC MUL SWAP3 SWAP1 SWAP2 DUP2 DUP2 DUP2 DUP6 DUP9 DUP9 CALL SWAP4 POP POP POP POP ISZERO DUP1 ISZERO PUSH2 0x262 JUMPI RETURNDATASIZE PUSH1 0x0 DUP1 RETURNDATACOPY RETURNDATASIZE PUSH1 0x0 REVERT JUMPDEST POP PUSH1 0x0 SLOAD PUSH20 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF AND SELFDESTRUCT STOP LOG1 PUSH6 0x627A7A723058 KECCAK256 0x4b 0xcb 0xcc CREATE2 SMOD GAS MSTORE DUP7 DUP13 SELFDESTRUCT SWAP1 0xaf DUP3 CREATE EQ SLT DUP15 0xbd 0xec LOG4 CALLDATALOAD 0xc7 DUP3 0xee 0x23 XOR DUP16 LOG4 0xf7 DUP12 PUSH17 0x8E00290000000000000000000000000000 ","runtimeBytecode":"6080604052600436106100615763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416631209b1f68114610066578063481c6a751461008d578063afff146a146100cb578063edca914c14610155575b600080fd5b34801561007257600080fd5b5061007b61015f565b60408051918252519081900360200190f35b34801561009957600080fd5b506100a2610165565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b3480156100d757600080fd5b506100e0610181565b6040805160208082528351818301528351919283929083019185019080838360005b8381101561011a578181015183820152602001610102565b50505050905090810190601f1680156101475780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b61015d61020c565b005b60015481565b60005473ffffffffffffffffffffffffffffffffffffffff1681565b6002805460408051602060018416156101000260001901909316849004601f810184900484028201840190925281815292918301828280156102045780601f106101d957610100808354040283529160200191610204565b820191906000526020600020905b8154815290600101906020018083116101e757829003601f168201915b505050505081565b600154341461021a57600080fd5b6000805460405173ffffffffffffffffffffffffffffffffffffffff90911691303180156108fc02929091818181858888f19350505050158015610262573d6000803e3d6000fd5b5060005473ffffffffffffffffffffffffffffffffffffffff16ff00a165627a7a723058204bcbccfb075a52868cff90af82f014128ebdeca435c782ee23188fa4f78b708e0029","srcmap":"376:442:0:-;;;488:165;;;;;;;;;;;;;;;;;;;;;;;;;;572:7;:17;;-1:-1:-1;;;;;;572:17:0;-1:-1:-1;;;;;572:17:0;;;;;488:165;;;;599:18;;488:165;;;;;599:18;;:11;;:18;;;;;:::i;:::-;-1:-1:-1;;;627:11:0;:19;376:442;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;376:442:0;;;-1:-1:-1;376:442:0;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;","srcmapRuntime":"376:442:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;427:23;;8:9:-1;5:2;;;30:1;27;20:12;5:2;427:23:0;;;;;;;;;;;;;;;;;;;;399:22;;8:9:-1;5:2;;;30:1;27;20:12;5:2;399:22:0;;;;;;;;;;;;;;;;;;;;;;;456:25;;8:9:-1;5:2;;;30:1;27;20:12;5:2;456:25:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:100:-1;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;456:25:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;659:157;;;;;;427:23;;;;:::o;399:22::-;;;;;;:::o;456:25::-;;;;;;;;;;;;;;-1:-1:-1;;456:25:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;659:157::-;726:11;;713:9;:24;705:33;;;;;;748:7;;;:30;;:7;;;;;765:4;:12;748:30;;;;;765:12;;748:30;:7;:30;765:12;748:7;:30;;;;;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;-1:-1;801:7:0;;;;788:21"}
 
 /***/ }),
 
@@ -495,47 +158,6 @@ var _default = instance;
 
   reactHotLoader.register(instance, 'instance', '/Users/Marko/Documents/FullStack-Junior/ticketSellingDApp/Ethereum/factory.js');
   reactHotLoader.register(_default, 'default', '/Users/Marko/Documents/FullStack-Junior/ticketSellingDApp/Ethereum/factory.js');
-  leaveModule(module);
-})();
-
-;
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./node_modules/webpack/buildin/harmony-module.js")(module)))
-
-/***/ }),
-
-/***/ "./Ethereum/ticket.js":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__web3__ = __webpack_require__("./Ethereum/web3.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__build_Tickets_json__ = __webpack_require__("./Ethereum/build/Tickets.json");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__build_Tickets_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__build_Tickets_json__);
-(function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").enterModule;
-
-  enterModule && enterModule(module);
-})();
-
-
-
-
-var _default = function _default(address) {
-  return new __WEBPACK_IMPORTED_MODULE_0__web3__["a" /* default */].eth.Contract(JSON.parse(__WEBPACK_IMPORTED_MODULE_1__build_Tickets_json___default.a.interface), address);
-};
-
-/* harmony default export */ __webpack_exports__["a"] = (_default);
-;
-
-(function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/patch.js").default;
-
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").leaveModule;
-
-  if (!reactHotLoader) {
-    return;
-  }
-
-  reactHotLoader.register(_default, 'default', '/Users/Marko/Documents/FullStack-Junior/ticketSellingDApp/Ethereum/ticket.js');
   leaveModule(module);
 })();
 
@@ -69857,7 +69479,7 @@ function extend() {
 
 /***/ }),
 
-/***/ "./pages/index.js":
+/***/ "./pages/new.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -69867,12 +69489,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__("./node_modules/react/cjs/react.development.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Ethereum_factory__ = __webpack_require__("./Ethereum/factory.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Components_SingleTicket__ = __webpack_require__("./Components/SingleTicket.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Components_Nav__ = __webpack_require__("./Components/Nav.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__static_style_css__ = __webpack_require__("./static/style.css");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__static_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__static_style_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Ethereum_web3__ = __webpack_require__("./Ethereum/web3.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__routes__ = __webpack_require__("./routes.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__routes___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__routes__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Components_BackNav__ = __webpack_require__("./Components/BackNav.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__static_style_css__ = __webpack_require__("./static/style.css");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__static_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__static_style_css__);
 
-var _jsxFileName = '/Users/Marko/Documents/FullStack-Junior/ticketSellingDApp/pages/index.js';
+var _jsxFileName = '/Users/Marko/Documents/FullStack-Junior/ticketSellingDApp/pages/new.js';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -69896,45 +69520,300 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
-var TicketsIndex = function (_Component) {
-  _inherits(TicketsIndex, _Component);
 
-  function TicketsIndex() {
-    _classCallCheck(this, TicketsIndex);
+var NewTicket = function (_Component) {
+  _inherits(NewTicket, _Component);
 
-    return _possibleConstructorReturn(this, (TicketsIndex.__proto__ || Object.getPrototypeOf(TicketsIndex)).apply(this, arguments));
+  function NewTicket(props) {
+    _classCallCheck(this, NewTicket);
+
+    var _this = _possibleConstructorReturn(this, (NewTicket.__proto__ || Object.getPrototypeOf(NewTicket)).call(this, props));
+
+    _this.state = {
+      loading: false,
+      error: '',
+      time: ['12:00 A.M.', '1:00 A.M.', '2:00 A.M.', '3:00 A.M.', '4:00 A.M.', '5:00 A.M.', '6:00 A.M.', '7:00 A.M.', '8:00 A.M.', '9:00 A.M.', '10:00 A.M.', '12:00 A.M.', '12:00 P.M.', '1:00 P.M.', '2:00 P.M.', '3:00 P.M.', '4:00 P.M.', '5:00 P.M.', '6:00 P.M.', '7:00 P.M.', '8:00 P.M.', '9:00 P.M.', '10:00 P.M.', '11:00 P.M.', '12:00 P.M.']
+    };
+    _this.sellTicket = _this.sellTicket.bind(_this);
+    return _this;
   }
 
-  _createClass(TicketsIndex, [{
+  _createClass(NewTicket, [{
+    key: 'sellTicket',
+    value: function () {
+      var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee(evt) {
+        var info, price, accounts;
+        return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                evt.preventDefault();
+                this.setState({ loading: true });
+                info = evt.target.name.value + '/' + evt.target.startTime.value + '/' + evt.target.venue.value + '/' + evt.target.city.value;
+                price = evt.target.price.value;
+                _context.prev = 4;
+                _context.next = 7;
+                return __WEBPACK_IMPORTED_MODULE_3__Ethereum_web3__["a" /* default */].eth.getAccounts();
+
+              case 7:
+                accounts = _context.sent;
+                _context.next = 10;
+                return __WEBPACK_IMPORTED_MODULE_2__Ethereum_factory__["a" /* default */].methods.createTicket(price, info).send({
+                  from: accounts[0]
+                });
+
+              case 10:
+
+                __WEBPACK_IMPORTED_MODULE_4__routes__["Router"].pushRoute('/');
+                _context.next = 16;
+                break;
+
+              case 13:
+                _context.prev = 13;
+                _context.t0 = _context['catch'](4);
+
+                this.setState({ error: _context.t0.message });
+
+              case 16:
+
+                this.setState({ loading: false });
+
+              case 17:
+              case 'end':
+                return _context.stop();
+            }
+          }
+        }, _callee, this, [[4, 13]]);
+      }));
+
+      function sellTicket(_x) {
+        return _ref.apply(this, arguments);
+      }
+
+      return sellTicket;
+    }()
+  }, {
     key: 'render',
     value: function render() {
+
       return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
         'div',
-        { id: 'app', __source: {
-            fileName: _jsxFileName,
-            lineNumber: 16
-          }
-        },
-        __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__Components_Nav__["a" /* default */], {
+        {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 17
+            lineNumber: 45
+          }
+        },
+        __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__Components_BackNav__["a" /* default */], {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 46
           }
         }),
         __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
           'div',
-          { className: 'tickets', __source: {
+          { className: 'outerForm', __source: {
               fileName: _jsxFileName,
-              lineNumber: 18
+              lineNumber: 47
             }
           },
-          this.props.tickets.map(function (address) {
-            return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Components_SingleTicket__["a" /* default */], { key: address, address: address, __source: {
+          __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+            'div',
+            {
+              __source: {
                 fileName: _jsxFileName,
-                lineNumber: 21
+                lineNumber: 48
               }
-            });
-          })
+            },
+            __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+              'h2',
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 49
+                }
+              },
+              'Enter Ticket Information Below'
+            )
+          ),
+          __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+            'form',
+            { className: 'form', id: 'newTicketForm', onSubmit: this.sellTicket, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 51
+              }
+            },
+            __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+              'div',
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 52
+                }
+              },
+              __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+                'label',
+                {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 53
+                  }
+                },
+                'Name of Performer'
+              ),
+              __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement('input', { name: 'name', type: 'text', required: true, placeholder: 'Name', __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 54
+                }
+              })
+            ),
+            __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+              'div',
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 56
+                }
+              },
+              __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+                'select',
+                { name: 'startTime', label: 'Start Time', __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 57
+                  }
+                },
+                this.state.time.map(function (time) {
+                  return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+                    'option',
+                    { key: time, __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 61
+                      }
+                    },
+                    time
+                  );
+                })
+              )
+            ),
+            __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+              'div',
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 67
+                }
+              },
+              __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+                'label',
+                {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 68
+                  }
+                },
+                'Venue Name'
+              ),
+              __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement('input', { name: 'venue', type: 'text', required: true, placeholder: 'venue', __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 69
+                }
+              })
+            ),
+            __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+              'div',
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 71
+                }
+              },
+              __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+                'label',
+                {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 72
+                  }
+                },
+                'Venue City'
+              ),
+              __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement('input', { name: 'city', type: 'text', required: true, placeholder: 'city', __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 73
+                }
+              })
+            ),
+            __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+              'div',
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 75
+                }
+              },
+              __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+                'label',
+                {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 76
+                  }
+                },
+                'Price'
+              ),
+              __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement('input', { name: 'price', type: 'text', required: true, placeholder: '00000000', __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 77
+                }
+              })
+            ),
+            __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+              'div',
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 79
+                }
+              },
+              __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+                'button',
+                { type: 'submit', __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 80
+                  }
+                },
+                'Create'
+              )
+            )
+          )
+        ),
+        !this.state.loading ? null : __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+          'div',
+          { className: 'loading', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 87
+            }
+          },
+          'This Will Take 15-30 Seconds Be Patient!'
+        ),
+        this.state.error === '' ? null : __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+          'div',
+          { className: 'error', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 95
+            }
+          },
+          __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+            'h2',
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 96
+              }
+            },
+            'Error! ',
+            this.state.error
+          )
         )
       );
     }
@@ -69943,42 +69822,12 @@ var TicketsIndex = function (_Component) {
     value: function __reactstandin__regenerateByEval(key, code) {
       this[key] = eval(code);
     }
-  }], [{
-    key: 'getInitialProps',
-    value: function () {
-      var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee() {
-        var tickets;
-        return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                _context.next = 2;
-                return __WEBPACK_IMPORTED_MODULE_2__Ethereum_factory__["a" /* default */].methods.getDeployedTickets().call();
-
-              case 2:
-                tickets = _context.sent;
-                return _context.abrupt('return', { tickets: tickets });
-
-              case 4:
-              case 'end':
-                return _context.stop();
-            }
-          }
-        }, _callee, this);
-      }));
-
-      function getInitialProps() {
-        return _ref.apply(this, arguments);
-      }
-
-      return getInitialProps;
-    }()
   }]);
 
-  return TicketsIndex;
+  return NewTicket;
 }(__WEBPACK_IMPORTED_MODULE_1_react__["Component"]);
 
-var _default = TicketsIndex;
+var _default = NewTicket;
 
 
 /* harmony default export */ __webpack_exports__["default"] = (_default);
@@ -69993,8 +69842,8 @@ var _default = TicketsIndex;
     return;
   }
 
-  reactHotLoader.register(TicketsIndex, 'TicketsIndex', '/Users/Marko/Documents/FullStack-Junior/ticketSellingDApp/pages/index.js');
-  reactHotLoader.register(_default, 'default', '/Users/Marko/Documents/FullStack-Junior/ticketSellingDApp/pages/index.js');
+  reactHotLoader.register(NewTicket, 'NewTicket', '/Users/Marko/Documents/FullStack-Junior/ticketSellingDApp/pages/new.js');
+  reactHotLoader.register(_default, 'default', '/Users/Marko/Documents/FullStack-Junior/ticketSellingDApp/pages/new.js');
   leaveModule(module);
 })();
 
@@ -70015,7 +69864,7 @@ var _default = TicketsIndex;
           next.router.update(r, Component)
         }
       }
-    })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/")
+    })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/new")
   
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./node_modules/webpack/buildin/harmony-module.js")(module)))
 
@@ -70062,14 +69911,6 @@ module.exports = "@import url('https://fonts.googleapis.com/css?family=ABeeZee')
 
 /***/ }),
 
-/***/ 2:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__("./pages/index.js");
-
-
-/***/ }),
-
 /***/ 3:
 /***/ (function(module, exports) {
 
@@ -70096,10 +69937,18 @@ module.exports = __webpack_require__("./pages/index.js");
 
 /* (ignored) */
 
+/***/ }),
+
+/***/ 7:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("./pages/new.js");
+
+
 /***/ })
 
-},[2])
+},[7])
           return { page: comp.default }
         })
       ;
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=new.js.map

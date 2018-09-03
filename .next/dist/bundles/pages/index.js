@@ -476,7 +476,7 @@ module.exports = {"assembly":{".code":[{"begin":26,"end":374,"name":"PUSH","valu
 
 
 //get instance of our deployed factory contract
-var instance = new __WEBPACK_IMPORTED_MODULE_0__web3__["a" /* default */].eth.Contract(JSON.parse(__WEBPACK_IMPORTED_MODULE_1__build_TicketsFactory_json___default.a.interface), '0x8d32641521179A30608C78AA9bdf0720903925A3');
+var instance = new __WEBPACK_IMPORTED_MODULE_0__web3__["a" /* default */].eth.Contract(JSON.parse(__WEBPACK_IMPORTED_MODULE_1__build_TicketsFactory_json___default.a.interface), '0x3e0909491a31995299034d8A8F2e82c8564627dd');
 
 /* harmony default export */ __webpack_exports__["a"] = (instance);
 
