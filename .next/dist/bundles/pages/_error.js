@@ -67,25 +67,24 @@ module.exports =
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 17);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "/Users/Marko/Documents/FullStack-Junior/ticketSellingDApp/node_modules/next/dist/pages/_error.js":
+/***/ 17:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(18);
+
+
+/***/ }),
+
+/***/ 18:
 /***/ (function(module, exports) {
 
 module.exports = require("/Users/Marko/Documents/FullStack-Junior/ticketSellingDApp/node_modules/next/dist/pages/_error.js");
 
-/***/ }),
-
-/***/ 1:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__("/Users/Marko/Documents/FullStack-Junior/ticketSellingDApp/node_modules/next/dist/pages/_error.js");
-
-
 /***/ })
 
 /******/ });
-//# sourceMappingURL=_error.js.map
